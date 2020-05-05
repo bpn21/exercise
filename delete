@@ -1,0 +1,6 @@
+var obj = {
+    name:bipin
+    age:24
+    roll:39
+}
+console.log('age is',a.)
