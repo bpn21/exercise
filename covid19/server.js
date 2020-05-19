@@ -25,9 +25,10 @@ app.use('/user', userRout)
 
 
 app.use(function (req, res, next) {
-    next('err');
+    next(err);
 })
 app.use(function (err, req, res, next) {
+    console.log('i m in error handelling middleware')
     res.status(err.message || 400)
     res.json({
         status: res.status + 400,

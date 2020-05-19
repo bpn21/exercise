@@ -10,8 +10,13 @@ userSchema = new Schema({
     password: {
         type: String,
         required: true,
-        unique: false,
+        unique : false
 
+    },
+    username: {
+        type: String,
+        required: true,
+        unique: true
     },
     address: {
         temporaryAddress: String,
