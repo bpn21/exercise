@@ -51,23 +51,6 @@ router.post('/login', function (req, res, next) {
             })
         }
     })
-    // mongoClient.connect(config.dbUrl, function (err, client) {
-    //     if (err) {
-    //         console.log('err in connecting ');
-    //     } else {
-    //         console.log('success in connecting');
-    //         var db = client.db(config.dbName);
-    //         db.collection('users').find({
-    //             username: req.body.username,
-    //             password: req.body.password
-    //         }).toArray(function (err, done) {
-    //             if (err) {
-    //                 return next(err);
-    //             }
-    //             res.status(200).json(done);
-    //         })
-    //     }
-    // })
 })
 
 router.post('/register', function (req, res, next) {
