@@ -1,0 +1,16 @@
+
+
+Nodejs is a run time environment.
+Nodejs is not a framework while there are lots of frame work for nodejs.
+
+Nodejsko framework ho express
+express.js web framework ho
+
+Ambient pattern bhaneyko k ho ?
+
+*****
+Javascript server ma run huncha..
+hami sanga node.js cha runtime environment
+abo hami sanga nodejs use garera baneko framework k k cha..
+hami web application ma cham
+web applicatoin ko lagi .. widly use huney framework bhaneko express

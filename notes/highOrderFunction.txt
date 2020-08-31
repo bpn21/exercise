@@ -1,0 +1,1 @@
+If a function that takes argument as a function

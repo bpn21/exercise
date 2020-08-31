@@ -1,0 +1,117 @@
+What is midleware ?
+middleware is a function which comes in between http request,response cycle, 
+which function has access of request object and response object.
+
+this function must have three argument, at least  argument.
+1st argument : http request object
+2nd argument : http response object
+3rd argument : next
+
+
+
+
+If you understand middleware you will understad express
+Types of middleware
+1) Application level middleware
+app.use();
+MIDDLEWARE LAI CONFIGURE GARNEY BLOCK BHANEYKO APP.USE()
+
+app.use() bhaneyko hamro lagi config block.
+configuration garney.. middleware ka rakhney bhaneyra.
+
+var a = function ( req, res, next){
+}
+
+app.use(a)
+where a is a middleware function
+
+we can not put string or anything in app.use. we MUST put only middleware
+***********
+ROUTING LEVEL MIDDLEWARE
+authRoute = require( './contoller/auth' )        ........ .. . .module.exports : router ;
+
+app.use(authRoute)  ... which is routing level middleware
+
+**********************************************************************************
+2) routing level middleware
+
+express = require('express')
+router = express.Router()
+....
+..
+.
+module.exports = router;
+
+
+FROM MAIN FILE (I.E FROM SERVER.JS)
+authRoute = require(./controller/auth)
+
+
+Yedi router chai app.use ma rakhcham bhaney ... Teo routing level middleware ho
+app.use(authRoute)  ... which is routing level middleware
+ inside auth :
+ app.get(.'/',function ( req, res, next){
+}
+app.post("./login",function(req,res,next){
+}
+app.put("./update",function(req,res,next){
+}
+app.delete("./delete",function(req, res, next){
+}
+
+
+
+
+
+4) 3rd party middleware
+
+third party middleware bhaneyko bhaneyko npmjs ma bhayeko middleware....
+easlai hamile afno application ma use gareko
+
+//// INFROMATION DINCHA
+GET /USER 200  2.038 ms
+
+
+
+
+INFORMATION FROM DOCUMENTATION OF MORGAN FROM NPMJS
+
+HTTP request logger middleware for node.js
+
+var morgan = require('morgan')
+
+
+
+
+
+6) error handling middleware
+
+app.use(function (req,res,next){
+    console.log('i am 404 handler middleware below routing')
+    next({
+        message: "not found",
+        status: 404
+    })
+})
+
+app.use(err,function,req,res,next){
+    res.status(err.status || 400)
+    res.json({
+        result:err.message || err
+        status:err.status || 400
+    })
+}
+7) inbuilt middleware
+
+J j Kura routing ma Handel huncha. Teo routing level middleware
+
+J j Kura npmjs bata taneyra leyera aauchan ni teo sab 3rd party middleware
+
+Inbuilt middleware bhaneyko express js sanga afai sanga bhako
+app.use('./img',express.static(path.join(_dirName,'files)));
+
+abo ./img chaina bhaney, as independent web frame work .internally server garcha. externally serve garna paryo bhaney .. ..eauta path ma serve garauna pryo 
+
+
+
+

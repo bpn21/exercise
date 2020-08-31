@@ -1,0 +1,32 @@
+views in express
+
+First , what is templeting engine ?
+A template engine enables you to use static template { i.e html ma static content huncha, teo hamile runtime ma change garauna sakidaina { template use garera controllerko data runtime ma change garauna sakicha } } files in your application. At runtime, the template engine replaces variables in a template file with actual values, and transforms the template into an HTML file sent to the client. This approach makes it easier to design an HTML page.
+
+SOME POPULAR TEMPLATE ENGINE
+Some popular template engines that work with Express are Pug, Mustache, and EJS. The Express application generator uses Jade as its default, but it also supports several others.
+
+Note: Jade has been renamed to Pug. You can continue to use Jade in your app, and it will work just fine. However if you want the latest updates to the template engine, you must replace Jade with Pug in your app.
+
+
+hamiley deykhiney templetes haru views ma rakhincha
+easko lagi set up garna ko lagi hamile server mai set up garincha
+
+
+**************88
+views, the directory where the template files are located.
+ Eg: app.set('views', './views'). 
+
+This defaults to the views directory in the application root directory.
+view engine, the template engine to use. 
+For example, to use the Pug template engine: app.set('view engine', 'pug').
+
+TEMPLATE ENGINE SYNTAX
+pug = require(' pug ') // pug is alternative of html . this is templeting engine
+app.set( 'view engine', 'pug' )
+app.set( ' views ', ' views ' )
+
+
+res.render('pugFileName', { data [optional] } )  it is a method to render a templete file
+
+render le jaile ni views bhitra rakheko fileko nam khojcha

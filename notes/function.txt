@@ -1,0 +1,86 @@
+function
+
+what is called high order function ?
+If a function that takes argument as a function
+
+
+callback function : A function which is passed as an argument to another function is called callback function.
+Those task whose result must be handled and that  result doesn't come in time.  We use callback function
+
+// Story for exam prepration
+
+//task part
+
+function callForNote(note, cb) {
+    console.log('asked a note for a friend');
+    setTimeout(function () {
+        cb(note);
+
+    }, 3000)
+}
+
+function printNote(note, cb) {
+    var electricity = true;
+    if (electricity) {
+        setTimeout(function () {
+            cb(null, note)
+        }, 4000)
+    }
+    else {
+        console.log('electricity is not avaliable')
+        cb('printing is failed !')
+    }
+}
+//execution part
+
+console.log('prepration for exam');
+callForNote('electric circuit and theory', function (note) {
+    console.log('got a note from friend after so long');
+});
+
+printNote('ect', function (err, success) {
+    if (err) {
+        console.log('Error in printing', err)
+    }
+    else {
+        console.log('printing is success ', success)
+
+    }
+})
+
+******************************************************************
+
+closure function : inner function
+
+
+function grandFather(name) {
+
+    function elderSon(name) {
+        console.log('i am elder son and my name is ' + name);
+        return ('elder')
+    }
+
+    function youngerSon(name) {
+        console.log('i am younger son and My name is ' + name);
+        return ("younger");
+    }
+
+    return {
+        elder: elderSon,
+        younger: youngerSon,
+    }
+}
+var result = grandFather(null).elder("Gopal prasad gaire");
+
+
+*************************************************************************8
+
+functional constructor  :
+
+How do we know it is a functional constructor ?
+Call kasari call vako cha herner.. 
+If call Huda kheri new keyboard use bhako cha bhaney teo funxtuonal constructor ho
+
+ new keyword le call huncha bhaney
+anonymous function : function without name
+middleware function : hhtp req res cycle , ko bichama function aaucha bhaney .. teo middleware function ho

@@ -1,0 +1,5 @@
+Atfirst✓  .Unshift
+At last✓  .push
+
+From First item : . shift ()
+From last item : .pop()

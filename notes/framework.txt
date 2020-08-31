@@ -1,0 +1,27 @@
+
+Framework ( design principle..kun kura ka rakhney bhaneyra)
+
+frameWork bhaneyko k ho ?
+Yo eauta architecture ho..
+yauta design principle ho, jun architecture le garda hamilai kam garna sajilo huncha.
+
+architecture bha`neyko k ho ?
+kun kura ka rakhney, kun fine ko connection kun five sanga garney
+
+Framework bhanda bitikai hamro dimagma aaucha eauta kura.. MVC
+
+YO INTERCONNECTION MECHANISM LAI FRAMEWORK BHANINCHA...
+
+j sukai application banaye pani afno afno framework huncha..
+
+
+
+
+
+Mobile application ko lagi chutai framework huncha
+Eg: ionic
+Desktop application ko lagi chutai framework.
+JavaScript ma multiple framework cha
+
+Hami web application ma cham.. 
+Web application ko lagi framework haru eakdam widely use huney bhaneyko express ho

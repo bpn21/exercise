@@ -1,0 +1,10 @@
+res.render('login' , {
+name: express,
+contact : information,
+phone : information ,
+text : information }
+
+
+abo.. hamile login pug file ma garera.. title bipin garyo bhaney ... browser ko title ma "bipn " nai aaucha
+BUT
+title = name garyo bhaney browser ko title ma express nai aaucha

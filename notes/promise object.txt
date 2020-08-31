@@ -1,0 +1,40 @@
+promise is not a function .
+it is a object
+
+writeContent('fileName.txt', 'this is an example of an promise object')
+    .then(function (data) {
+        console.log('success in writing')
+    })
+    .catch(function (data) {
+        console.log('err in writing')
+    })
+
+function writeContent(fileName, content) {
+    return new Promise(function (resolve, reject) {
+        fs.writeFile(fileName, content, function (err, done) {
+            if (err) {
+                console.log('err', err)
+                reject(err);
+            } if (done) {
+                resolve(done)
+            }
+
+        })
+    })
+}
+
+
+Success = resolve
+Failure = reject
+
+Object bhitrako function lai method bhancha.
+Promise ko Pani method cha 3 ota.
+
+.then
+It is used to handle both success and failure.
+
+.catch
+It is used to handle only failure
+
+    .finally
+It is used to track settled.

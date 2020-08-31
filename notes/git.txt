@@ -1,0 +1,18 @@
+Java script is a losely type programming language
+
+
+GIT
+
+git init (initiloze a package.json file which contain major information about the project)
+git add. (. For all files)
+git commit -m "message"
+Git log ( sees history of git commit )
+
+///Above things can be carried locally for tracking project)
+
+When we need to share project an store in cloud
+// Cloud service provider
+github
+gitlab
+gitbucket
+

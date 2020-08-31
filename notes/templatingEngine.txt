@@ -1,0 +1,13 @@
+Html ma static content huncha
+Yo runtime ma change garauna sakidaina
+Template engine use garesakeypachi controller ko data view ma dekhauna sakincha 
+ Normal html use garera run time ma dekhauna sakdainam
+
+TEMPLATE ENGINE SYNTAX
+pug = require(' pug ') // pug is alternative of html . this is templeting engine
+app.set( 'view engine', 'pug' )
+app.set( ' views ', ' views ' )
+
+Why pug ??? why not html ?
+ html ma static content huncha, teo hamile runtime ma change garauna sakidaina
+  { templete use garera controllerko data runtime ma change garauna sakicha }

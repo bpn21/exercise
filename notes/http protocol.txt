@@ -1,0 +1,19 @@
+http protocol
+
+To use the HTTP server and client one must require('http').
+The HTTP interfaces in Node.js are designed to support many features of the protocol which have been traditionally difficult to use.
+
+
+http ko differernt different method
+get
+post
+put
+delete
+
+hamile http protocal use gareko chau bhaney
+hamro server http server
+browserle use garney propotal http protocal
+browserle use garney protocal http protocal
+
+http req ma pani http method huncha. we call it http verb
+

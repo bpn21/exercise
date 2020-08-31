@@ -1,0 +1,4 @@
+Dot Prototype
+ (. prototype)keyword is used
+Js ma jati ni data type Chan.. sabai data time chai functional constructor..
+Ani ani Sabai data type ko inbuilt meth huncha

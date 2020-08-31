@@ -1,0 +1,11 @@
+package.json
+npm init(initilizes pacakage.json)
+
+What is package.json ?
+    Yo eauta json object ho..
+Easle hamilai eauta object dincha
+package.json le eauta object hold gardo raicha...Jun bhitra nested object ni huncha.
+
+Yo overall ma eauta object ho.
+
+Jun sukai project gare Pani hami sanga eauta package.json bhaney eauta file hunu parcha..

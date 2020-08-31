@@ -1,0 +1,26 @@
+howToTakeDataFromForm
+DATA ADAN PRADAN
+
+req.body() use garera lina sakincha..
+but
+undefine aaucha..... 
+
+tesko lagi .. we need to parse a data... that is possible from middleware
+
+here we use body parser , at third party middle ware. paila express sanga inbuilt middleware thiye so.... alll use to use body parser.but now we have inbuilt middleware of express itself
+or 
+inbuilt middleware of express 
+i.e. 
+app.use(express.urlencodded({
+extended = 'true')}
+
+here, nested data ayo bhaney parse garney ki nagarney ? rakhney, so true..
+but form bata kaile ni nested data aaudaina
+
+json parser ni chahincha 
+
+we have,
+
+app.use( express.json( ) )
+
+******************************************************************

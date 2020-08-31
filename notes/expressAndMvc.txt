@@ -1,0 +1,26 @@
+Express bhaneyko framework ho..
+
+http use garera hamiley server  create gareko thimm. Teo abo gaena pardaina.. express afai sanga huncha server
+
+expressjs is completely independent web application
+Many popular framework are based on express
+express mai base bhayera aaru tannai framework baneko cha
+
+Express().listen.....
+
+
+MVC    
+model view controller in
+Yo chai three tyre application
+1) VIEW view layer// hamiley dekhiney layer
+- hamile deykhiney layer, user interface(UI) layer
+- view ko controller sanga communication huncha.
+
+3) CONTROLLER business logic lagauney layer(control layer)
+-controller ko model sanga communicate huncha.
+
+5) MODEL data layer (model)
+
+Direct interraction mostly hudaina, hudai nahuney chai hoina.
+
+
