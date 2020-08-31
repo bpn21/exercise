@@ -1,3 +1,14 @@
+
+const express = require('express')
+const app = express()
+
+app.get('/', function (req, res) {
+  res.send('hello world')
+})
+
+app.listen(3000)
+
+
 Express bhaneyko framework ho..
 
 http use garera hamiley server  create gareko thimm. Teo abo gaena pardaina.. express afai sanga huncha server
@@ -6,7 +17,45 @@ expressjs is completely independent web application
 Many popular framework are based on express
 express mai base bhayera aaru tannai framework baneko cha
 
-Express().listen.....
+EXPRESS METHODS :
+express.json();
+express.static();
+express.Router();
+express.urlencoded();
+
+APPLICATIPN METHODS
+app.use();
+app.set();
+app.get();
+app.listen();
+app.get();
+app.post();
+app.put();
+app.delete();
+app.desable();
+app.enable();
+
+EXPRESS REQUEST
+req.body
+req.baseUrl
+req.params
+...
+..
+..
+
+RESPOSE
+
+res.end
+res.append
+res.render
+
+
+ROUTER
+
+router.params
+router.route()
+router.use()
+
 
 
 MVC    
