@@ -50,15 +50,16 @@ authRoute = require(./controller/auth)
 Yedi router chai app.use ma rakhcham bhaney ... Teo routing level middleware ho
 app.use(authRoute)  ... which is routing level middleware
  inside auth :
- app.get(.'/',function ( req, res, next){
+ Router.get(.'/',function ( req, res, next){
 }
-app.post("./login",function(req,res,next){
+Router.post("./login",function(req,res,next){
 }
-app.put("./update",function(req,res,next){
+Router.put("./update",function(req,res,next){
 }
-app.delete("./delete",function(req, res, next){
+Router.delete("./delete",function(req, res, next){
 }
 
+exports.module: Router;
 
 
 
