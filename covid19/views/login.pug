@@ -9,19 +9,18 @@ span login page </span>
 <br>
 <br>
 
-    form(method = "POST")
-        input(type = "text",placeholder = "username",name = "username")
+    form(action = "/login", method = "POST")
+        input(type = "text",placeholder = 'Username', name ='username')
         <br>
         <br>
-        input(type = 'password',placeholder = 'password', name = 'password')
+        input(type = 'password',placeholder = 'Password', name ='password')
         <br>
         <br>
 
         input(type ='submit',value = 'login')
 
-
         br
         br
 
 span you dont have account?
-a(href="auth/register") register
+a(href="/auth/register"||"/register") register

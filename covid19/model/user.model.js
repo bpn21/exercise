@@ -7,10 +7,16 @@ userSchema = new Schema({
         unique: true,
         sparse: true,
     },
+    firstName : {
+        type: String
+    },
+    lastName :{
+        type: String
+    },
     password: {
         type: String,
         required: true,
-        unique : false
+        unique: false
 
     },
     username: {
@@ -18,6 +24,9 @@ userSchema = new Schema({
         required: true,
         unique: true
     },
+    gender : {
+        type : String,
+            },
     address: {
         temporaryAddress: String,
         permanentAddress: String
@@ -28,8 +37,8 @@ userSchema = new Schema({
         default: 2,
     },
 }, {
-        timestamps: true
-    })
+    timestamps: true
+})
 var userModel = mongoose.model('user', userSchema);
 
 module.exports = userModel;

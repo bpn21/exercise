@@ -6,22 +6,21 @@ var config = require('./../config/config')
 var jwt = require('jsonwebtoken')
 var UserModel = require('./../model/user.model')
 
-function createToken(data) {
+function createToken(user) {
     var token = jwt.sign({
-        username: data.username,
-        id: data._id
+        username: user.username,
+        id: user._id
     }, config.jwtSecret);
-    console.log('what comes in token inside function')
     return token;
 }
 
 router.get('/', function (req, res, next) {
     res.render('login')
-
 })
 
 router.get('/register', function (req, res, next) {
     res.render('register');
+
 })
 
 router.put('/update', function (req, res, next) {
@@ -52,19 +51,21 @@ router.post('/login', function (req, res, next) {
         }
     })
 })
-
 router.post('/register', function (req, res, next) {
     console.log('register data is here ', req.body)
     var newUser = new UserModel();
-    if (req.body.name)
-        newUser.name = req.body.name;
+    if (req.body.firstName)
+        newUser.firstName = req.body.firstName;
+    if(req.body.lastName)
+        newUser.lastName = req.body.lastName;
     if (req.body.email)
         newUser.email = req.body.email;
+        if(req.body.gender)
+        newUser.gender = req.body.gender
     if (req.body.date)
         newUser.date = new date(req.body.date);
-    if (req.body.address)
+    if (req.body.temporaryAddress || req.body.temporaryAddress)
         newUser.address = {
-
             temporaryAddress: req.body.temporaryAddress,
             permanentAddress: req.body.permanentAddress,
         };
@@ -81,7 +82,7 @@ router.post('/register', function (req, res, next) {
         if (err) {
             return next(err);
         }
-        res.status(200).json(done);
+        res.status(200).json({ done });
     })
 })
 

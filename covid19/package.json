@@ -11,6 +11,9 @@
   "dependencies": {
     "express": "^4.17.1",
     "json-web-token": "^3.2.0",
+    "mongoose": "^5.10.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
     "pug": "^2.0.4"
   }
 }

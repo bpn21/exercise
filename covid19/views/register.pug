@@ -9,17 +9,29 @@ span register page </span>
 <br>
 <br>
 
-    form(action = "/auth/register",method = "POST")
-        input(type = "text",placeholder = "first name",name = "first name")
+    form(action = "auth/register",method = "POST")
+        input(type = "text",placeholder = 'First Name',name = 'firstName')
         <br>
         <br>
-        input(type = 'text',placeholder = 'last name', name = 'last name')
+        input(type = 'text',placeholder = 'Last Name', name = 'lastName')
         <br>
         <br>
-          input(type = 'text',placeholder = 'username', name = 'username')
+          input(type = 'text',placeholder = 'Username', name ='username')
         <br>
         <br>  
-        input(type = 'text',placeholder = 'password', name = 'password')
+        input(type = 'text',placeholder = 'Email', name = 'email')
+        <br>
+        <br>
+        input(type = 'text',placeholder='Permanent Aaddress',name = 'permanentAddress')
+        <br>
+        <br>    
+        input(type = 'text',placeholder='Temporary Address',name ='temporaryAddress')
+        <br>
+        <br>
+        input(type= 'text',placeholder='Gender',name='gender')
+        <br>
+        <br>
+        input(type = 'text',placeholder = 'Password', name = 'password')
         <br>
         <br>
 
@@ -28,5 +40,7 @@ span register page </span>
 
         br
         br
-        span Register 
+        span Already have an account?
+
+a(href="/auth/") login
 
