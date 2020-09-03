@@ -1,0 +1,89 @@
+
+securely transmitting information between parties as a JSON object.
+There is no languare barier
+]
+
+JWT.IO allows you to decode, verify and generate JWT.
+
+What is JSON Web Token?
+JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.This information can be verified and trusted because it is digitally signed.
+
+
+When should you use JSON Web Tokens?
+Authorization  :   Once the user is logged in, each subsequent request will include the JWT, allowing the user to access routes, services, and resources that are permitted with that token.
+
+Information Exchange : JSON Web Tokens are a good way of securely transmitting information between parties. 
+
+
+What is the JSON Web Token structure?
+In its compact form, JSON Web Tokens consist of three parts separated by dots (.), which are:
+
+Header
+Payload
+Signature
+
+Therefore, a JWT typically looks like the following.
+
+
+
+xxxxx.yyyyy.zzzzz
+
+
+
+Why should we use JSON Web Tokens?
+
+JSON parsers are common in most programming languages because they map directly to objects. Conversely, XML doesn't have a natural document-to-object mapping. This makes it easier to work with JWT than SAML assertions.
+
+
+
+AT AUTH MODULE
+function createToken(user) {
+    var token = jwt.sign({
+        username: user.username,
+        id: user._id
+    }, config.jwtSecret);
+    return token;
+}
+...............................................
+.............................
+...................
+..............
+ UserModel.findOne({
+        username: req.body.username,
+        password: req.body.password
+    }, function (err, user) {
+        if (err) {
+            return next(err)
+        }
+        if (user) {
+            console.log('what comes in user',user)
+            var token = createToken(user);
+            res.status(200).json({
+                user: user,
+                token: token
+            })
+
+............................................
+...............................
+..............
+jwt.io
+.......
+
+
+AT AUTHENTICATION
+if (token) {
+       jwt.verify(token,config.jwtSecret,function(err,done){
+           if(err){
+               console.log('i am at error')
+               next(err)
+           }
+           if(done){
+               next()
+           }
+       })
+    } else {
+        res.json({
+            message: 'token not provided',
+            status: 300
+        })
+    }

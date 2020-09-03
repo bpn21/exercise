@@ -1,0 +1,16 @@
+Object relation mapping
+Schema based solution
+Using ORM saves a lot of time because:
+
+
+DRY: You write your data model in only one place, and it's easier to update, maintain, and reuse the code.
+A lot of stuff is done automatically, from database handling to I18N.
+It forces you to write MVC code, which, in the end, makes your code a little cleaner.
+You don't have to write poorly-formed SQL (most Web programmers really suck at it, because SQL is treated like a "sub" language, when in reality it's a very powerful and complex one).
+Sanitizing; using prepared statements or transactions are as easy as calling a method.
+Using an ORM library is more flexible because:
+
+It fits in your natural way of coding (it's your language!).
+It abstracts the DB system, so you can change it whenever you want.
+The model is weakly bound to the rest of the application, so you can change it or use it anywhere else.
+It lets you use OOP goodness like data inheritance without a headache.

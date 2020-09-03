@@ -4,10 +4,10 @@ var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
 var config = require('./../config/config');
 var oid = mongodb.ObjectID;
-var userModel = require('./../model/user.model')
+var UserModel = require('./../model/user.model')
 
 router.get('/', function (req, res, next) {
-    userModel.find({})
+    UserModel.find({})
         .sort({
             _id: -1
         }
@@ -20,7 +20,7 @@ router.get('/', function (req, res, next) {
         })
 })
 router.post('/', function (req, res, next) {
-    userModel.findOne({
+    UserModel.findOne({
         username: req.body.username,
         password: req.body.password
     }, function (err, user) {
@@ -50,7 +50,7 @@ router.post('/', function (req, res, next) {
 router.get('/:id', function (req, res, next) {
     console.log('i am in get of id');
 
-    userModel.findById({ _id: req.params.id })
+    UserModel.findById({ _id: req.params.id })
         .exec(function (err, user) {
             if (err) {
                 return next(err);
@@ -64,7 +64,7 @@ router.get('/:id', function (req, res, next) {
 
 router.put('/:id', function (req, res, next) {
 
-    userModel.findById(req.params.id)
+    UserModel.findById(req.params.id)
         .exec(function (err, user) {
             if (err) {
                 return next(err)
@@ -102,7 +102,7 @@ router.put('/:id', function (req, res, next) {
 })
 
 router.delete('/:id', function (req, res, next) {
-    userModel.findById(req.params.id)
+    UserModel.findById(req.params.id)
         .exec(function (err, user) {
             if (err) {
                 next(err)

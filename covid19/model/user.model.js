@@ -34,7 +34,7 @@ userSchema = new Schema({
     role: {
         type: Number,
         enum: [1, 2, 3],
-        default: 2,
+        // default: 2
     },
 }, {
     timestamps: true

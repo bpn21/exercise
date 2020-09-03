@@ -1,0 +1,28 @@
+delete 
+update 
+garda request initiate garney le id or username.. something kai dincha.. so tesko aadhar ma hamile delete garna prni huncha or update garna parni huncha.
+so client le deyeko data use garnako lagi req.params garnu parcha
+eg.  var id =  req.params.id
+
+
+url bata data send garna paryo serverma ..bhaney req.params... for example.
+for eg
+localhost:9000/user/fksjr9034jwes09f4j39u-w4jfu39u4fs
+eg.  var id =  req.params.id
+
+
+we use while deleting
+
+here username is data...
+
+
+
+two ways we send data from qrl
+eauta slash garera
+eata ? garara
+? question mark garera send gareko data lai url match huna pardaina...
+i.e
+ get("./"function( req, res, next){ } )
+/ garera send gareko data lai url match huna parcha 
+i.e
+ get('./ : username' function ( req, res, next ){ } )

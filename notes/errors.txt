@@ -1,0 +1,2 @@
+cant set headers after they are sent
+esauta pariticular request response due choti jana khojyo  bhaney aaucha
