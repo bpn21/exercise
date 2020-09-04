@@ -1,2 +1,23 @@
-cant set headers after they are sent
+1> cant set headers after they are sent
 esauta pariticular request response due choti jana khojyo  bhaney aaucha
+
+
+
+2> POST /product 500 19.939 ms - 1836
+
+no route
+router.post(function (req, res, next) {})
+Solution
+router.post('/', function (req, res, next) {})
+
+
+3> Cannot read property 'push' of undefined
+express = require('express') or  app = require('express')
+
+router = express.Router <<<<<<<<<<
+then we have error
+Cannot read property 'push' of undefined
+this can be solved by 
+router = express.Router ()
+
+>>>>paranthesis problem<<<<<

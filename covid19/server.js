@@ -3,6 +3,7 @@ var express = require('express');
 var app = express();
 var authRout = require('./controller/auth');
 var userRout = require('./controller/user');
+var productRout = require('./controller/product');
 var morgan = require('morgan');
 var authenticate = require('./middleware/authenticate');
 var authorize = require('./middleware/authorize');
@@ -27,7 +28,8 @@ app.use(express.urlencoded({
 
 // routing level middleware
 app.use('/auth', authRout);
-app.use('/user',authenticate,authorize,userRout)
+app.use('/user', authenticate, authorize, userRout)
+app.use('/product', productRout)
 
 // frontend lai k ma chayo message ? key ?
 // key as message or result? so this is helpful

@@ -1,0 +1,5 @@
+var a = 12/2/2020
+<<undefine
+new Date(a)
+TRY THIS IN BROWSER CONSOLE
+format afai milaidincha
