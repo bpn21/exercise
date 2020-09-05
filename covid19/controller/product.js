@@ -12,6 +12,7 @@ router.get('/', function (req, res, next) {
 
         })
 })
+
 router.get('/:id', function (req, res, next) {
     var id = req.params.id
     productModel.findById(id)
@@ -23,27 +24,12 @@ router.get('/:id', function (req, res, next) {
 
         })
 })
+
 router.post('/', function (req, res, next) {
     console.log('what comes in product post request :', req.body);
-    var newProduct = new productModel();
-    if (req.body.name)
-        newProduct.name = req.body.name
-    if (req.body.brand)
-        newProduct.brand = req.body.brand
-    if (req.body.size)
-        newProduct.size = req.body.size
-    if (req.body.model)
-        newProduct.model = req.body.model
-    if (req.body.quality)
-        newProduct.quality = req.body.quality
-    if (req.body.status)
-        newProduct.status = req.body.status
-    if (req.body.price)
-        newProduct.price = req.body.price
-    if (req.body.quantity)
-        newProduct.quantity = req.body.quantity
-
-    newProduct.save(function (err, done) {
+    var mappedProduct = new productModel();
+    var mappedProduct = mapProd.product(mapProduct)
+    mappedProduct.save(function (err, done) {
         if (err) {
             next(err)
         }
@@ -51,8 +37,9 @@ router.post('/', function (req, res, next) {
             res.status(200).json(done)
         }
     })
-
 })
+
+
 router.put('/:id', function (req, res, next) {
     var id = req.params.id;
     console.log('what comes in id :', id)
@@ -90,10 +77,9 @@ router.put('/:id', function (req, res, next) {
 
             }
         })
-
 })
-router.delete('/:id', function (req, res, next) {
 
+router.delete('/:id', function (req, res, next) {
 })
 
 module.exports = router;

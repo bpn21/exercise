@@ -6,6 +6,8 @@ var config = require('./../config/config')
 var jwt = require('jsonwebtoken')
 var UserModel = require('./../model/user.model');
 const { json } = require('express');
+var mapData = require('./../mapData/mapData');
+console.log('what comes in mappData', mapData)
 
 function createToken(user) {
     var token = jwt.sign({
@@ -55,37 +57,15 @@ router.post('/login', function (req, res, next) {
     })
 })
 router.post('/register', function (req, res, next) {
-    console.log('register data is here ', req.body)
-    console.log('role data is here ', req.headers.role)
+    // console.log('register data is here ', req.body)
+    // console.log('role data is here ', req.headers.role)
 
     var newUser = new UserModel();
-    if (req.body.firstName)
-        newUser.firstName = req.body.firstName;
-    if (req.body.lastName)
-        newUser.lastName = req.body.lastName;
-    if (req.body.email)
-        newUser.email = req.body.email;
-    if (req.body.gender)
-        newUser.gender = req.body.gender;
-    if (req.body.date)
-        newUser.date = new date(req.body.date);
-    if (req.body.temporaryAddress || req.body.temporaryAddress)
-        newUser.address = {
-            temporaryAddress: req.body.temporaryAddress,
-            permanentAddress: req.body.permanentAddress,
-        };
-    // newUser.dob = new date(req.body.dob),
-    if (req.body.password)
-        newUser.password = req.body.password;
-    if (req.body.username)
-        newUser.username = req.body.username;
-    if (req.body.gender)
-        newUser.gender = req.body.gender;
-    if (req.headers.role)
-        newUser.role = req.headers.role
-    // newUser.createdAt = new date();
+    var mappedUser = mapData.user(newUser, req.body)
+    console.log('what comes in mapped user', mappedUser)
+    // mappedUser.createdAt = new date();
 
-    newUser.save(function (err, done) {
+    mappedUser.save(function (err, done) {
         if (err) {
             return next(err);
         }
@@ -96,26 +76,26 @@ router.delete('/:id', function (req, res, next) {
     var id = req.params.id;
     console.log("req.params.id >>>>>>>>>>>>>>>>>>>>>>.", req.params.id)
     UserModel.findById(id)
-    .exec(function (err, user) {
-        if (err) {
-            next(err);
-        }
-        if (user) {
-            user.remove(function (err, removed) {
-                if (err) {
-                    next(err)
-                }
-                if (removed) {
-                    res.json({ removed })
-                }
-            })
-        } else {
-            next({
-                message: 'user not found',
-                status: 404
-            })
-        }
+        .exec(function (err, user) {
+            if (err) {
+                next(err);
+            }
+            if (user) {
+                user.remove(function (err, removed) {
+                    if (err) {
+                        next(err)
+                    }
+                    if (removed) {
+                        res.json({ removed })
+                    }
+                })
+            } else {
+                next({
+                    message: 'user not found',
+                    status: 404
+                })
+            }
 
-    })
+        })
 })
 module.exports = router;
