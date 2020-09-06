@@ -28,22 +28,21 @@ function mapUser(mappedData, mapData) {
 }
 
 function mapProd(mappedProduct, mapProduct) {
-    if (mapProduct.name)
-        mappedProduct.name = mapProduct.name
-    if (mapProduct.brand)
-        mappedProduct.brand = mapProduct.brand
+    if (mapProduct.client)
+        mappedProduct.client = mapProduct.client
+    if (mapProduct.item)
+        mappedProduct.item = mapProduct.item
     if (mapProduct.size)
         mappedProduct.size = mapProduct.size
-    if (mapProduct.model)
-        mappedProduct.model = mapProduct.model
-    if (mapProduct.quality)
-        mappedProduct.quality = mapProduct.quality
+    if (mapProduct.catogory)
+        mappedProduct.catogory = mapProduct.catogory
     if (mapProduct.status)
         mappedProduct.status = mapProduct.status
     if (mapProduct.price)
         mappedProduct.price = mapProduct.price
     if (mapProduct.quantity)
         mappedProduct.quantity = mapProduct.quantity
+    
 
     return mappedProduct
 }

@@ -1,30 +1,28 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var ProductSchema = new Schema({
-    name: String,
-    brand: {
-        type: String,
-    },
-    model: {
+    
+    client: String,
+    items: {
         type: String
+    },
+    catogory: {
+        type: String,
     },
     size: {
         type: String,
-        enum: ['small', 'medium', 'large']
+        // enum: ['small', 'medium', 'large']
     },
     status: {
         type: String,
-        enum: ['avaliable', 'sold']
     },
-    quality: {
-        type: String,
-        enum: ['high', 'medium', 'low']
-    },
-
     price: Number,
+    quantity: Number,
     manuDate: Date,
     experyDate: Date,
-    quantity: Number,
+    image : {
+        type : String
+    },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'user'

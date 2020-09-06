@@ -57,7 +57,7 @@ router.post('/login', function (req, res, next) {
     })
 })
 router.post('/register', function (req, res, next) {
-    // console.log('register data is here ', req.body)
+    console.log('register data is here ', req.body)
     // console.log('role data is here ', req.headers.role)
 
     var newUser = new UserModel();

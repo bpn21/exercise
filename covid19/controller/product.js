@@ -1,6 +1,17 @@
 var express = require('express');
+var multer = require('multer')
 router = express.Router();
 var productModel = require('./../model/productModel');
+var mapData = require('./../mapData/mapData')
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './files/image')
+    },
+    filename: function (req, file, cb) {
+        cb(null, Date.now() + '-' + file.originalname)
+    }
+})
+var upload = multer({ storage: storage })
 
 router.get('/', function (req, res, next) {
     productModel.find({})
@@ -25,10 +36,14 @@ router.get('/:id', function (req, res, next) {
         })
 })
 
-router.post('/', function (req, res, next) {
-    console.log('what comes in product post request :', req.body);
-    var mappedProduct = new productModel();
-    var mappedProduct = mapProd.product(mapProduct)
+router.post('/', upload.single('image'), function (req, res, next) {
+    console.log('what comes in file ', req.file)
+    console.log('register data is here ', req.body)
+    var newProduct = new productModel();
+    var mappedProduct = mapData.product(newProduct, req.body)
+    if (req.file) {
+        mappedProduct.image = req.file.filename
+    }
     mappedProduct.save(function (err, done) {
         if (err) {
             next(err)
