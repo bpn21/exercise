@@ -1,0 +1,34 @@
+UserModel.findById(id, function (err, user) {
+        if (err) {
+            next(err);
+        }
+        if (user) {
+            user.remove(function (err, removed) {
+                if (err) {
+                    next(err)
+                }
+                if (removed) {
+                    res.json({ removed })
+                }
+            })
+
+
+
+OR
+
+  UserModel.findById(id)
+    .exec(function (err, user) {
+        if (err) {
+            next(err);
+        }
+        if (user) {
+            user.remove(function (err, removed) {
+                if (err) {
+                    next(err)
+                }
+                if (removed) {
+                    res.json({ removed })
+                }
+            })
+
+

@@ -1,0 +1,21 @@
+WHAT is call back? 
+
+A function which is passed as an argument to another function is called callback function.
+Those task whose result must be handled and that  result doesn't come in time.  We use callback function. 
+****************************************************
+
+
+if (user) {
+            user.remove(function (err, removed) {
+                if (err) {
+                    next(err)
+                }
+                if (removed) {
+                    res.json({ removed })
+                }
+
+***********************************************************************88
+something.remove(callbback narakheyni huncha)
+tara(BUT) delete bhayo ki bhayena ?
+
+delete bhayo ki bhako chaina . hamilai tha hunako lagi matra ho

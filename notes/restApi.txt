@@ -1,0 +1,79 @@
+rest API (Representational state transfer) 
+
+This is nothing but architecture.
+rest and api are completely different kura ho
+dutai kura le banera .. rest api ho
+
+REST bhaney ko pani eauta architecture ho..
+aile sama hamile heyreko MVC architecture.
+communication between model and  controller
+communication between view and  model
+
+
+REST pani eauta architeture ho 
+1) HTTP PROTOCOL MUST BE USED
+2) HTTP VERB - correct use of http verb
+http verb ko correct verb huna paryo
+i.e
+get ma fetch
+put ma update nai gerko cha( purano metho... path method ma ni garna sakinch )
+post ma insert nai garko chau
+delete ma delete nai gareko chau
+
+
+Rest architecture le data ni object ma khojcha.. so res.json() user garerako
+json mai hunu pacha bhaney eauta manyeta
+
+HTTP IS A STATELESS PROTOCOL
+REST architecture hunako lagi http protocal use hunai paryo
+http afaima stateless protocol ho
+
+
+******************************************************
+documentation padha khera.. stateless protocal use hunai paryo bhancha..
+teo bhaneyko http nai use gana bhayeko
+
+
+rest architecture completely stateless huna paryo
+correct use of htp verb hunna paryo
+http ma json format use huna paryo
+
+
+What is state less protocol ?
+
+Http is a stateless protocol.(UDP =connection Less)
+paila ko request kai pani tha hudaina.
+login garyo sakyo..
+paila ko login bhako theo.. k bhako theo... matlab huaina.
+i.e
+pailako STATE kai pani tha hudaina
+pailako request ko state kai pani tha hudaina
+haraek req as new request
+
+kosko request ayo bhaneyra tha huney nai eai token, session cookies bata ho
+
+
+WHAT IS STATE FULL PROTOCOL?
+connection bhaye pachi.. continous connection (TCP)
+
+TCP  = connection orriented
+UDP =connection Less
+
+
+
+kosko request ayo bhaneyra tha huney nai eai token, session cookies bata ho
+>>>>>>>>>>>>>>>>>>>>>>.Http is a stateless protocol<<<<<<<<<<<<<<<<<<<<<<<,,
+
+
+what is tcp and udp ?
+TCP  = connection oriented
+eakcoti conntion bhaye pachi ..connection establish bhaerakhnu paryo
+paila k k bhayo, abo k k jadai cha
+abo k k jadai cha bhaney kura tw.. paila k k gaayo tha hunu pacha....
+
+**************************************************************************
+UDP = connection Less
+
+HTTP IS  UDP  i.e COMPLETELY state less protocol
+
+
