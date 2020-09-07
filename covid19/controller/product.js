@@ -1,3 +1,5 @@
+var fileName = '';
+var fs = require('fs')
 var express = require('express');
 var multer = require('multer')
 router = express.Router();
@@ -8,7 +10,8 @@ var storage = multer.diskStorage({
         cb(null, './files/image')
     },
     filename: function (req, file, cb) {
-        cb(null, Date.now() + '-' + file.originalname)
+        fileName = Date.now() + '-' + file.originalname
+        cb(null, fileName)
     }
 })
 var upload = multer({ storage: storage })
@@ -36,13 +39,34 @@ router.get('/:id', function (req, res, next) {
         })
 })
 
+
 router.post('/', upload.single('image'), function (req, res, next) {
     console.log('what comes in file ', req.file)
     console.log('register data is here ', req.body)
-    var newProduct = new productModel();
-    var mappedProduct = mapData.product(newProduct, req.body)
+    var originalname = req.file.originalname;
+    var arr = originalname.split('.');
+    var extension = arr[arr.length - 1];
     if (req.file) {
-        mappedProduct.image = req.file.filename
+        var newProduct = new productModel();
+        var mappedProduct = mapData.product(newProduct, req.body)
+        console.log('extension >>>>>>>>>>>>>>>>>>>', extension)
+        if (extension == 'jpeg' || extension == 'png' || extension == 'gif' || extension == 'jpg') {
+            mappedProduct.image = req.file.filename
+        } else {
+            console.log('filename :', fileName)
+            fs.unlink('./files/image/' + fileName, function (err) {
+                console.log('***********************************************88')
+
+                if (err) {
+                    return next(err)
+                }
+                res.status(200).json({
+                    message: 'Only a file with extension jpeg or png or gif or jpg is uploaded',
+                    status: 400
+                })
+            })
+
+        }
     }
     mappedProduct.save(function (err, done) {
         if (err) {

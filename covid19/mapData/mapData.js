@@ -42,7 +42,8 @@ function mapProd(mappedProduct, mapProduct) {
         mappedProduct.price = mapProduct.price
     if (mapProduct.quantity)
         mappedProduct.quantity = mapProduct.quantity
-    
+    if (mapProduct.image)
+        mappedProduct.image = mappedProduct.image
 
     return mappedProduct
 }
