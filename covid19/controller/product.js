@@ -1,10 +1,12 @@
+var authorize = require('./../middleware/authorize')
 var fileName = '';
 var fs = require('fs')
 var express = require('express');
 var multer = require('multer')
 router = express.Router();
 var productModel = require('./../model/productModel');
-var mapData = require('./../mapData/mapData')
+var mapData = require('./../mapData/mapData');
+const { runInNewContext } = require('vm');
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, './files/image')
@@ -17,7 +19,11 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage })
 
 router.get('/', function (req, res, next) {
-    productModel.find({})
+    var condition = {};
+    if (req.loggedInUser.role != 1) {
+        condition.user = req.loggedInUser.id
+    }
+    productModel.find({user:'5f5608e0ed3d52149c4c69c5'})
         .exec(function (err, product) {
             if (err) {
                 return next(err);
@@ -41,21 +47,18 @@ router.get('/:id', function (req, res, next) {
 
 
 router.post('/', upload.single('image'), function (req, res, next) {
-    console.log('what comes in file ', req.file)
-    console.log('register data is here ', req.body)
-    var originalname = req.file.originalname;
-    var arr = originalname.split('.');
-    var extension = arr[arr.length - 1];
+    var newProduct = new productModel();
+    var mappedProduct = mapData.product(newProduct, req.body)
+    mappedProduct.user = req.loggedInUser.id
     if (req.file) {
-        var newProduct = new productModel();
-        var mappedProduct = mapData.product(newProduct, req.body)
-        console.log('extension >>>>>>>>>>>>>>>>>>>', extension)
+        var originalname = req.file.originalname;
+        var arr = originalname.split('.');
+        var extension = arr[arr.length - 1];
         if (extension == 'jpeg' || extension == 'png' || extension == 'gif' || extension == 'jpg') {
             mappedProduct.image = req.file.filename
         } else {
             console.log('filename :', fileName)
             fs.unlink('./files/image/' + fileName, function (err) {
-                console.log('***********************************************88')
 
                 if (err) {
                     return next(err)

@@ -7,10 +7,10 @@ userSchema = new Schema({
         unique: true,
         sparse: true,
     },
-    firstName : {
+    firstName: {
         type: String
     },
-    lastName :{
+    lastName: {
         type: String
     },
     password: {
@@ -24,9 +24,10 @@ userSchema = new Schema({
         required: true,
         unique: true
     },
-    gender : {
-        type : String,
-            },
+    gender: {
+        type: String,
+        enum: ['male', 'female']
+    },
     address: {
         temporaryAddress: String,
         permanentAddress: String
@@ -34,7 +35,7 @@ userSchema = new Schema({
     role: {
         type: Number,
         enum: [1, 2, 3],
-        // default: 2
+        default: 2
     },
 }, {
     timestamps: true

@@ -21,7 +21,9 @@ function mapUser(mappedData, mapData) {
     if (mapData.username)
         mappedData.username = mapData.username;
     if (mapData.gender)
-        mappedData.gender = mapData.gender;
+        mappedData.gender = mapData.gender
+    if (mapData.role)
+        mappedData.role = mapData.role
 
     console.log('what comes in mappedData', mappedData)
     return mappedData

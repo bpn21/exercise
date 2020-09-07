@@ -29,7 +29,7 @@ app.use(express.urlencoded({
 // routing level middleware
 app.use('/auth', authRout);
 app.use('/user', authenticate, authorize, userRout)
-app.use('/product', productRout)
+app.use('/product', authenticate, productRout)
 
 // frontend lai k ma chayo message ? key ?
 // key as message or result? so this is helpful

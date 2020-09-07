@@ -1,4 +1,5 @@
 var express = require('express');
+var passwordHash = require('password-hash');
 router = express.Router();
 var mongodb = require('mongodb');
 var mongoClient = mongodb.MongoClient;
@@ -13,7 +14,6 @@ function createToken(user) {
     var token = jwt.sign({
         username: user.username,
         id: user._id,
-        role: user.role
     }, config.jwtSecret);
     return token;
 }
@@ -34,20 +34,27 @@ router.post('/login', function (req, res, next) {
     console.log('what comes in: ', req.body)
     UserModel.findOne({
         username: req.body.username,
-        password: req.body.password
     }, function (err, user) {
         if (err) {
             return next(err)
         }
         console.log('here', user)
         if (user) {
+            var matched = passwordHash.verify(req.body.password, user.password)
             console.log('what comes in user.role', user.role)
 
             var token = createToken(user);
-            res.status(200).json({
-                user: user,
-                token: token
-            })
+            if (matched) {
+                res.status(200).json({
+                    user: user,
+                    token: token
+                })
+            }else{
+                next({
+                    message:  'password or username is incorrect'
+                })
+            }
+
         } else {
             res.status(404).json({
                 message: 'user not found',
@@ -57,14 +64,10 @@ router.post('/login', function (req, res, next) {
     })
 })
 router.post('/register', function (req, res, next) {
-    console.log('register data is here ', req.body)
-    // console.log('role data is here ', req.headers.role)
-
     var newUser = new UserModel();
     var mappedUser = mapData.user(newUser, req.body)
+    mappedUser.password = passwordHash.generate(req.body.password)
     console.log('what comes in mapped user', mappedUser)
-    // mappedUser.createdAt = new date();
-
     mappedUser.save(function (err, done) {
         if (err) {
             return next(err);
