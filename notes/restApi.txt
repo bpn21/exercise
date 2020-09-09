@@ -77,3 +77,64 @@ UDP = connection Less
 HTTP IS  UDP  i.e COMPLETELY state less protocol
 
 
+***********************************************************************************************************
+MODULE BASE ARCHITECTURE / COMPONENT BASE ARCHITECTURE..
+backend ma chai j bhanda ni huncha
+Exact difference chai anguar garda tha huncha
+
+1st we make a new folder named component in outermost layer. 
+inside component 
+
+i.e component/ product for products
+component/product/model.js
+component/product/query.js
+>>>this file will maintain db query.js
+component/product/controller.js
+>>>application or business logic of application
+component/product/routes
+api
+component/product/helpers
+>>>reusable code / functions used by different modules
+
+**********************************************************************************************************
+
+SURUMA OUTER LAYER MA SAKAUNEY KI INNER LAYER SAKAUNEY ?
+OUTER LAYERS BATA SURU GARNEY HO BHANEY
+Path diyera kun file lai call gareney tha huna paryo....
+abo path bhaney bitikai routes bheney folder routes bhaney path
+
+INNER LAYER BATA SURU GARNEY HO BHANEY  MODEL BATA SURU GARNA PARYO
+
+model>>
+// we make schema
+
+query>>
+(queryma req,res,next aaunu hudaina..i.e middleware aaunu hudaina)
+query ma condition lagauney
+require (./../../product.model)
+function declare garney ani function ko argument ma condition rakhedey ani code lekhdai janey
+HERE WE HAVE A PROBLEM IN QUERY 
+I.E  WE CANT USE NEXT( ) BECAUSE we dont use middleware
+so we either call back function or promise object
+
+controller>>
+(req,res,next)middleware  huncha.( business logic..+ end point ko kam)
+var productQuery = require(./../query/product.query)
+query ma bhako function controller ma property bhaedincha where product query chai object
+
+>>routes>>
+var producctController = require(./../controller/productController.js)
+router = require('express').Router();
+Routing garney
+router.get('./',productController.get)
+where get is funcition in controller which takes one argument and that function is called from query and query takes a with helper
+router.get('./:id',productController.getById)
+...
+..
+
+>>api (outer layerma banauney)
+require(./../productRout)
+
+
+
+
