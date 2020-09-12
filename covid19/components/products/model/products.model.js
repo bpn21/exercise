@@ -1,11 +1,15 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var ProductSchema = new Schema({
-    
+    name: String,
+    brand: String,
+    quantity: String,
+
     client: String,
     items: {
         type: String
     },
+    model: String,
     catogory: {
         type: String,
     },
@@ -20,8 +24,8 @@ var ProductSchema = new Schema({
     quantity: Number,
     manuDate: Date,
     experyDate: Date,
-    image : {
-        type : String
+    image: {
+        type: String
     },
     user: {
         type: Schema.Types.ObjectId,

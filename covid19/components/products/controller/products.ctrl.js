@@ -1,3 +1,4 @@
+const productsQuery = require('./../query/products.query');
 var productQuery = require('./../query/products.query');
 console.log('i am here controller outside')
 
@@ -46,7 +47,17 @@ function insert(req, res, next) {
         })
 
 }
-
+function remove(req, res, next) {
+    id = {}
+    id._id = req.params.id
+    productsQuery.remove(id)
+        .then(function (removedProduct) {
+res.status(200).json(removedProduct)
+        })
+        .catch(function (err) {
+            next(err)
+        })
+}
 module.exports = {
     list: list,
     getById: getById,
