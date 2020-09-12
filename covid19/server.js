@@ -10,8 +10,6 @@ var authorize = require('./middleware/authorize');
 var config = require('./config/config');
 require('./db');
 var apiRout = require('./api.routes')(authenticate)
-console.log("what comes in apiRoute", apiRout)
-
 pug = require('pug');
 app.set('view engine', 'pug');
 app.set('views', 'views');

@@ -8,7 +8,6 @@ var jwt = require('jsonwebtoken')
 var UserModel = require('./../model/user.model');
 const { json } = require('express');
 var mapData = require('./../mapData/mapData');
-console.log('what comes in mappData', mapData)
 
 function createToken(user) {
     var token = jwt.sign({

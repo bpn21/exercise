@@ -1,12 +1,10 @@
-var authorize = require('./../middleware/authorize')
 var fileName = '';
 var fs = require('fs')
 var express = require('express');
 var multer = require('multer')
 router = express.Router();
-var productModel = require('./../components/products/products.model');
+var productModel = require('./../components/products/model/products.model');
 var mapData = require('./../mapData/mapData');
-const { runInNewContext } = require('vm');
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, './files/image')
