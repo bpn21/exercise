@@ -1,0 +1,205 @@
+
+// Super set of javaScript
+// it is like javaScript but much more feature and rules then javascript
+// this is not loosely type programing langulage jasle garda securuty thereat theo.. k ayo k return vayo kai tha hudaina theo
+// typescript ma chai strickly type
+// TYPE DECLARATION IS THE MOST
+// datatype define huncha
+// eai data accept garchu yo gardina.. bhana paiyo
+// easle garda security eakdam maintain huncha
+// *********************************************
+// aile sama es5 gareko thim..
+// abo chai es6 method
+// WE DONT WRITE VAR, EITHER WE WRITE LET OR CONST
+
+// es6 ko gareko pachi katiko code readabe bhayo tw? easto kura notice garney
+
+// to check version
+// tsc -v
+
+// SERVER OR brower ma run huda.. typescript bhayera basdaina, back to javaScript hunu parcha
+// hamro Typescript ko file TRANSPILE bhayera javaScript bhaney  ho !!!
+// programing language ko logic change hundaina.. matra sorce code change huncha
+
+// we have tsc command in typescript that we run in command prompt
+
+// program run garnako lagi node test.ts hoina !!! , tsc test.ts
+
+// tsc test.tc garepachi tesko equivalent javascript file banaidencha ani js file execute garney 
+
+// So, kina ts ma code lekheko ? js ma sidai nagarera ?
+// task runner  huncha .. orserver ko casema something third party huncha.
+// Transpiler ley rokdincha
+
+
+
+// TYPESCRIPT
+// datatypes
+// String
+// boolen
+// number
+// undefine
+// null
+
+
+// object
+// object declare kasari garney ??? 
+// array
+
+// NOW WE HAVE HOMOGENEOUS ARRAY
+// ki string ko matra array
+// ki boolen ko matra array
+// ki number ko matra array
+
+
+// function calculate(age:number){
+// statement....
+// statement..
+// statement..
+// }
+
+// calculate(12)
+// calaulate('jhsdasd') // error falcha
+ 
+
+
+
+
+
+// This means that your existing working JavaScript code is also TypeScript code. The main benefit of TypeScript is that it can highlight unexpected behavior in your code, lowering the chance of bugs.
+// function calculate(age: number) {
+
+// }
+// calculate(12)
+
+
+//interface
+// interface is the collection of properties that define object
+// string ko s capital lekheni huncha nalekheni huncha
+
+// interface mailDetails {
+//     sender: string,
+//     to: string,
+//     sub: string,
+//     message: string,
+//     a: string,
+//     receiver: string,
+//     b: string,
+//     c: string
+// }
+// interface is the collection of properties that define object
+// string lai direct string bhana paiyo 
+// number lai sedai number bhana paiyo
+// datatype object declaration garna paryo bhaney interface ko help lina paryo
+
+// let abc : mailDetails garna ni paiyo
+// let abc : mailDetails;
+// abc = {
+//     sender: 'jalskjd',
+// }
+
+// function sendMail(details: mailDetails) {
+//     let obj = {
+//         from: details.sender,
+//         to: details.receiver,
+//         sub: details.sub,
+//         message: details.message,
+//         something: details.a,
+//         anything: details.b
+
+//     }
+// }
+
+
+
+// Array
+// let hobbies: string[]
+// let hobbies1: Array<number>
+
+
+// 
+// let a: any
+// a = 'sjdfklsj',
+//     a = 2039,
+//     a = true,
+
+
+//     function calculate(a: any) {
+
+//     }
+
+
+// conditional
+// same as of javaScript like if else switch
+
+// operator
+// same as of javaSCript
+
+// loop
+// for -of loop in es6
+
+// ******************************************IMPORTANT PART**************************************8
+// class based oop
+// fucntional constructor
+// new keyword garda functional construcor call hunteo
+// constructor ma kai add garna paryo bhaney prototype use garinteo
+
+
+// HAREYK TS FILEMA CLASS HUNCHA HUNCHA
+
+
+
+
+
+// abstraction
+// complex kura hide garera chainey kura matra deykhauneylai abstraction bhanchau
+
+// polymarphism 
+// multiple format, abo inputko adharma multiple form huney vayo, class ko function ko.. jsukaiko pani
+
+// inherit
+// code reuse,  code multiple choti lekhna garna naparos bhaneyra 
+
+// encaptulation
+// data hiding mechaninm using access specifier or we call it visibility levels.
+// when access specifier arenot specified, members will be private automatically but incase of typescript members will be public automatically
+
+// class Fruits {
+//     public origin: string = 'Nepal'
+//     constructor() {
+
+//     }
+//     public getOrigin() {
+//         this.color()
+//     }
+//     public setOrigin() {
+
+//     }
+//     private color() {
+
+//     }
+//     protected sayHello() {
+
+//     }
+//     protected hi() {
+
+//     }
+// }
+
+// var apple = new Fruits();
+// apple.getOrigin
+// apple.setOrigin
+// console.log(typeof (apple))
+
+//private and protected kura instance le kaile pani chalainan paidaina
+
+
+// ABO KALEY CHAI CHALAINA PAUCHA ?
+// private kura within the same class matra chalauna paiencha
+// 
+
+// this
+// this is a object of that particular class and the methods inside class are property,so properties are ... getOrigin(), setOrigin(), color(), sayHello(),hi().. so we do this.getOrigin(),this.setOrigin(), this.sayHello(), this.hi(). so this is the object of that particalar class. :)
+
+// abo protected chai kina banako hola ?
+// protected bujnako lagi suruma hamile bujnu parcha inheritance

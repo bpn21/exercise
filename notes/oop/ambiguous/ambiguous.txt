@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+class base
+{
+public:
+   void show ()
+  {
+cout<<"hello world"<<endl;
+  }
+};
+class base1
+{
+public:
+void show ()
+  {
+cout<<"hello world"<<endl;
+  }
+};
+class derived:public base, public base1
+{
+
+};
+
+int main ()
+{
+  derived d;
+  d.show ();
+  // cout<<"Hello World";
+
+  return 0;
+}

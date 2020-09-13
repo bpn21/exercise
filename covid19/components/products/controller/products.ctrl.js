@@ -26,6 +26,18 @@ function getById(req, res, next) {
             next(err)
         })
 }
+function insert(req, res, next) {
+
+    productQuery.insert(req.body,req.file)
+        .then(function (done) {
+            res.status(200).json(done)
+        })
+        .catch(function (err) {
+            next(err)
+        })
+
+}
+
 function update(req, res, next) {
     var id = {}
     id._id = req.params.id
@@ -37,22 +49,13 @@ function update(req, res, next) {
             next(err)
         })
 }
-function insert(req, res, next) {
-    productQuery.insert(req.body)
-        .then(function (done) {
-            res.status(200).json(done)
-        })
-        .catch(function (err) {
-            next(err)
-        })
 
-}
 function remove(req, res, next) {
     id = {}
     id._id = req.params.id
     productsQuery.remove(id)
         .then(function (removedProduct) {
-res.status(200).json(removedProduct)
+            res.status(200).json(removedProduct)
         })
         .catch(function (err) {
             next(err)
@@ -62,5 +65,6 @@ module.exports = {
     list: list,
     getById: getById,
     insert: insert,
-    update: update
+    update: update,
+    remove: remove
 }

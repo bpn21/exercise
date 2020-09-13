@@ -25,7 +25,7 @@ var ProductSchema = new Schema({
     manuDate: Date,
     experyDate: Date,
     image: {
-        type: String
+        type: String,
     },
     user: {
         type: Schema.Types.ObjectId,

@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+class base {
+    public:
+    void area(int r){
+        cout << "single parameter area is " <<3.14*r*r<<endl;   
+    };
+    void area(int h,int b){
+       cout << "double parameter area is" << (b*h)*0.5<<endl;
+    };
+
+    void area(double a,double b){
+        cout << "three parameter area is" << (b*a) <<endl; 
+    };
+};
+    int main()
+{
+   base obj;
+   obj.area(2);
+   obj.area(8,10);
+   obj.area(2.0,2.0);
+   return 0;
+}
