@@ -1,0 +1,42 @@
+oop
+
+Emphasis on data rather than procedure
+program is divided into objects while in c Large program was divided into smaller programs known as function.
+An object is a complete entity.It has all the data and associated function with it.
+Data is hidden and cannot be accessed bt external function while data were made globle in c.
+
+
+An object is basic run-time entity in object orinted system.
+
+
+CLASS :
+class is the collection of object of similar type.(like mango,apple, orange are member of class fruit.) Once a class is created, any number of objects beloging to that class can be created.
+
+ABSTRACTION:
+act of representating essential features without including background details.
+
+
+ENCAPSULATION:
+wrapping of data and function into single unit (called class) is known as encaptulation.
+
+INHERTITANCE : 
+process in which object of one class can accure the properties of object of another class.
+
+POLYMORPHISM :
+polymarphism refers to ability to take more than one form.
+function overloading and operator overloading shwo the concept of compile time polymorphism while run time polymorphism is run by using virtual function.
+
+
+DISADVANTAGES OF OOP
+
+COMPILE AND RUN TIME OVERHEAD IS HIGH.
+REORINTATION OF SOFTWARE DEVELOPER TO OBJECT ORIENTED THINKING.
+REQUIRES MASTERLY IN SIFTWARE ENGINEERING AND PROGRAMMING METHODOLOGY.
+BENEFITS ONLY IN LONG TERM WHILE MANAGING LARGE SOFTWARE PROJECTS.
+
+
+operator overloading : 
+c++ extends the meaning of operator for user defined types. such as +,-,+=,>,<,>>,<<, etc are designed to opereate on special data types. HOWEVER, through operator overloading features, we can extend the meaning of operators to operate on user defined types.
+
+RUNTIME POLYMORPHISM
+ 
