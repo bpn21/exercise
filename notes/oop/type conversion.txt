@@ -1,0 +1,3 @@
+type conversion
+when datatypes are mixed in an expresson. c++ converts datatypes automatically.
+this process is called automtic data conversion.

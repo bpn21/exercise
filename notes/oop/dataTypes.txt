@@ -26,3 +26,10 @@ PREMETIVE DATA TYPES(valued DATATYPES)
 4> null
 5> undefine
 6> symbol
+
+NON-PREMITIVE DATATYPES(refrencetype)
+a) array
+b) object
+3) funtion
+4) Date
+5) regex
