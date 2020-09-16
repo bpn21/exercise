@@ -1,0 +1,22 @@
+Characters and set Tokens
+1> keyboard
+Reversed keys and cannot be changed by others. eg : int, var, char if, else, private,public,protected
+
+2> Identfiers
+Uppercase and lower cases are distict. They are used for naming functions, variable, array, structure, etc. these are sequience of letters,digits and underscore(_).
+
+3> costants
+constants also called actual literals are the actual representation of the values in program.
+constants also called literals. are actual representation of values used in program.
+Types of constant are:
+a> Integer constant
+b> Floating point constant
+c> Character constant
+d> String constant and 
+e> Enumerated constant
+
+4> operators
+C++ has different character sets and symbols.Operation are the special symbols which cause to perform mathemetical and logical operations.
+
+5> punctuators
+The symblos which acts like punctuations marks are called punctuators.

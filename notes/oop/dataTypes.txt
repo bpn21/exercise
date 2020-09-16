@@ -1,0 +1,28 @@
+DATA TYPES in c++
+1> userdefine datatypes
+structure, union, eneumeration
+
+
+2> derived datatypes
+array, pointer. refrence
+
+
+3> built-in-datatypes
+a) void, b) integral type and c) floating type
+
+b) Intergral type:
+>>>> int, char
+
+c) Floating type
+>>>> float, double
+
+****************************************************************
+****************************************************************
+datatypes in javaScript
+PREMETIVE DATA TYPES(valued DATATYPES)
+1> numbers
+2> string
+3> float
+4> null
+5> undefine
+6> symbol
