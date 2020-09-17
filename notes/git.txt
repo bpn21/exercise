@@ -16,7 +16,13 @@ push              Update remote refs along with associated objects
 ///Above things can be carried locally for tracking project)
 
 
+When we need to share project and store in cloud
+// Cloud service provider
+github
+gitlab
+gitbucket
 
+***************************************************************
 These are common Git commands used in various situations:
 
 start a working area (see also: git help tutorial)
@@ -52,9 +58,4 @@ collaborate (see also: git help workflows)
    pull              Fetch from and integrate with another repository or a local branch
    push              Update remote refs along with associated objects
 
-When we need to share project an store in cloud
-// Cloud service provider
-github
-gitlab
-gitbucket
 

@@ -1,0 +1,8 @@
+If a function that takes an argument as a function
+
+app.listen(config.port, function (err, done) {
+    if (err) {
+        console.log('error in listining' + err);
+    } else
+        console.log('success in listining');
+})

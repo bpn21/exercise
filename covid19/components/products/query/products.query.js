@@ -1,3 +1,5 @@
+// USE OF HIGHER ORDER FUNCTION
+
 var productModel = require('./../model/products.model');
 var helper = require('./../helper/helper')
 var fs = require('fs')

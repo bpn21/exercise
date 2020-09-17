@@ -1,0 +1,6 @@
+the lines begining with (#) sign are called preprossesor directive.
+
+#inculde<iostream>
+#define pi 3.1415
+
+Note: They do not terminate with semicolon.

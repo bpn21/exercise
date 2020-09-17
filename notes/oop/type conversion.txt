@@ -1,3 +1,21 @@
 type conversion
 when datatypes are mixed in an expresson. c++ converts datatypes automatically.
 this process is called automtic data conversion.
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int a, b;
+  float c;
+  cout<<"enter two numbers : "<<endl;
+    cin>>a>>b;
+    c = static_cast<float>(a)/b;
+    cout<<"answer : "<<c<<endl;
+    return 0;
+}
+
+
+here, both and b are integer, if a was float it would automatically convert into float. in order to convert forcefullly we need type casting
