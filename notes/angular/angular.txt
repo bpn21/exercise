@@ -1,0 +1,112 @@
+angular banako kole ?
+google
+google ko jun team le banayo angular, tei team le banako angular cli.
+
+angular single file run garna sakidaina.
+ 
+oop ko pillars haru mostly implement garchau.
+typescript ma programing garchau.
+angular 1 and angular 2 are completey different !!! kai mildaida... 
+anugular 2 dekhi mathi.. sab similar nai cha. naya naya features haru cha
+THERE WILL BE BACKWARD COMPATIBLE.
+
+
+easko github ko page cha.. 
+github is a open source community
+first go to www.angular.io
+then go to gitHub
+
+naya version ma k k change bhayecha. bhaney kura herna sakincha... we have to go change log.example : 7.1.0-rc.0(2018-11-14) . rc bhaneyko realese candidate.
+
+issues :
+naya issues harru huncha easma
+rapidly growing technologima chau.. so.. issues haru aaerakcha.. 1990 ko kura chalayo bhaney. issues hudaina.. sabai fix bhaesakeyko huncha. but hami tw aaile rapid growing technology ma chau.
+
+
+angualr sinka ko lagi
+we have a tool called angular cli
+
+You use the Angular CLI to create projects, generate application and library code, and perform a variety of ongoing development tasks such as testing, bundling, and deployment.
+To install the Angular CLI, open a terminal window and run the following command:
+
+
+npm install -g @angular/cli
+Run the CLI command ng new and provide the name my-app, as shown here:
+
+content_copy
+ng new my-app
+The ng new command prompts you for information about features to include in the initial app
+The CLI creates a new workspace and a simple Welcome app, ready to run.
+
+The CLI creates a new workspace and a simple Welcome app, ready to run.
+
+
+ task runner ma hamisanga webpack cha
+ webpack internally clile use garcha.
+
+abo hamile afno system ma anguar 7 install garney bhaneykai... algualar cli nai rakhney ho
+
+angular ko lagi eauta keyword cha. that is "ng"
+
+ cli.angular.io
+npm install -g @angular/cli
+ng new my-dream-app
+cd my-dream-app
+
+package.json >> introdoctory file
+carat operator means install latest version
+tild operator le chai.. easkai oripariko stable version aaucha. 
+
+tslint.json >> lint bhnaey ko.. hamro katai comma chutyo ki.. cama dherai bhayo ki.. single quote ko lagi single quote bhayo ki.
+lint ko lagi rule ya define huncha.
+yo file chalauna pardaina.
+
+
+tsconfig.json >> complier or transpile option sabai eai huncha
+
+package-lock.json >> version haru lock garney
+
+angular.json >> angular cli bata baneyko project ho bhaneyra chinauna.. rule huncha
+
+.gitignore >> git push garda .. .gitignore bhitra lekheko file push hudaina or ignore huncha
+
+.editorconfig  >> eauta organization ma kam garda.. kunai rule ma baseyra kam garney ho bhaney use garna sakincha. this contains {
+charset = utf-8
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.ts]
+quote_type = single
+
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false}
+
+
+e2e >> end to end 
+testing garna parcha but kina ?
+thulo application banauda.. eauta kura banauda tesko dependencies le garda.. aru ni change huna sakcha. so it may require more time in testing than in developent.
+kun file chalauda k bigrincha... yad hudaina.. birsincha..
+testing is the most for big application
+for backend in express we have moka
+front end ko lagi ni moka cha.. but.. we have special called jasmin.
+
+
+src >> jun jun file ma .spec huncha.. teo sabai testing ko lagi ho
+
+
+style.css >> globaly use huney css..like logoma use huney css.
+
+polifills.css >> browser related ho. browser related file.
+
+main.ts >> Angular ko project ma main file main.ts ho.
+
+karma >> testing kolafi ho.
+index.html >> browers ma run bhaneykai eau ho (render huny).. browers ma render/run huneyfile bhaneykao
+
+
+
+
+

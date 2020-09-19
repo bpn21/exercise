@@ -49,10 +49,3 @@ app.use(function (err, req, res, next) {
         status: res.status || 400
     })
 })
-
-app.listen(config.port, function (err, done) {
-    if (err) {
-        console.log('error in listining' + err);
-    } else
-        console.log('success in listining');
-})

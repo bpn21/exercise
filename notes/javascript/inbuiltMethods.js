@@ -80,7 +80,8 @@ console.log('parsed result>>',JSON.parse(stringify))
 /*enemeurated properties
 for in      //(j jati countable huncha sabai lai lagauna paeyo)array ko lagi lagauna ni payeyo, object ko lagi lagauna ni payiyo
 for each    // array ko lagi matra
-map         // array ko lagi matra
+map         // array ko lagi matr
+a
 filter      //array ko lagi matra
 reduce      //array ko lagi matra
 for of 
@@ -88,4 +89,4 @@ some
 find
 every
 
-
+*/
