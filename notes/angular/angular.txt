@@ -5,7 +5,10 @@ google ko jun team le banayo angular, tei team le banako angular cli.
 angular single file run garna sakidaina.
  
 oop ko pillars haru mostly implement garchau.
+oop ma function function function huncha bhaney ...  ts file ma chai class class class huncha .  each ts file will have a class.
 typescript ma programing garchau.
+augular.org bhaney ko angular 1
+angular.io bhaeyko ^1 i.e greater then one.
 angular 1 and angular 2 are completey different !!! kai mildaida... 
 anugular 2 dekhi mathi.. sab similar nai cha. naya naya features haru cha
 THERE WILL BE BACKWARD COMPATIBLE.
@@ -16,16 +19,17 @@ github is a open source community
 first go to www.angular.io
 then go to gitHub
 
-naya version ma k k change bhayecha. bhaney kura herna sakincha... we have to go change log.example : 7.1.0-rc.0(2018-11-14) . rc bhaneyko realese candidate.
+naya version ma k k change bhayecha. bhaney kura herna sakincha... we have to go CHANGE LOG.example : 7.1.0-rc.0(2018-11-14) . rc bhaneyko realese candidate.
 
 issues :
+issues bhaney section hamilai eakdam kam lagcha.
 naya issues harru huncha easma
 rapidly growing technologima chau.. so.. issues haru aaerakcha.. 1990 ko kura chalayo bhaney. issues hudaina.. sabai fix bhaesakeyko huncha. but hami tw aaile rapid growing technology ma chau.
-
 
 angualr sinka ko lagi
 we have a tool called angular cli
 
+hamiley afno sysyem ma angular 10 install garney bhaneyko ni yei angular cli(WEBPACK) nai rakhney ho... chutai angualar rakhney hoina.. rakkhna sakincha.. but mahile.. angular cli tool use garincha.
 You use the Angular CLI to create projects, generate application and library code, and perform a variety of ongoing development tasks such as testing, bundling, and deployment.
 To install the Angular CLI, open a terminal window and run the following command:
 
@@ -36,6 +40,8 @@ Run the CLI command ng new and provide the name my-app, as shown here:
 content_copy
 ng new my-app
 The ng new command prompts you for information about features to include in the initial app
+
+ng bhaney ko angular cli (WEBPACK)ko lagi equivalent command .
 The CLI creates a new workspace and a simple Welcome app, ready to run.
 
 The CLI creates a new workspace and a simple Welcome app, ready to run.
@@ -44,7 +50,7 @@ The CLI creates a new workspace and a simple Welcome app, ready to run.
  task runner ma hamisanga webpack cha
  webpack internally clile use garcha.
 
-abo hamile afno system ma anguar 7 install garney bhaneykai... algualar cli nai rakhney ho
+abo hamile afno system ma anguar 7 install garney bhaneykai... algualar cli(WEBPACK) nai rakhney ho
 
 angular ko lagi eauta keyword cha. that is "ng"
 
@@ -103,9 +109,71 @@ polifills.css >> browser related ho. browser related file.
 
 main.ts >> Angular ko project ma main file main.ts ho.
 
-karma >> testing kolafi ho.
+karma >> testing ko lagi ho.
 index.html >> browers ma run bhaneykai eau ho (render huny).. browers ma render/run huneyfile bhaneykao
 
+
+spec file haru sabai testing ko lagi ho  
+
+
+HAMILE CHALAUNE MODULE BHANEYKO SRC MODULE
+
+app.module.ts
+angular cli bata genetete gareko angular 2, angular 3. angular 2 bhanda badi above ko project haru cha. sabauma eauta na eauta root module hunai parcha.
+angular js afaima perticular eauta module hoina. different different module haru bata baneyko cha. jun kura hamile package.json ma ni herna sakincha. like animation module, compilem module, form moule, core module, common module, etc abo form sanga kam garna paryo bhaney forms module.
+
+hamro angular js ko application ma root module hunai parcha.
+hamilai main.ts ma bootstrap garchau..
+bootstrap bhaneyko css ko kura hoina..
+eak step paila.. eak paila hidana pani AppModule nai chaiyo
+kasari tanney main file ma.. import garney. 
+eg import {AppModule} from './app/app.module'
+
+
+hamro application eauta root module hunai parcha kam garnako lagi. kun ho tw ? route module..
+root module chai main ko bootstrap ma use huna paryo .
+
+
+MODULE BHANEYKO K HO ?
+COMPONENT BHANEYIKO K HO ? 
+
+
+GLOSSARY(frequently use bhaerakney kura)
+module, // class
+exmaple : @ngmodule({
+    bootstrap : root component rakhincha like AppComponent
+})
+component, //class
+services, //class
+directive, //class
+pipe, //class
+these all are class
+sabai kura class ho. mudule bhaney pani class nai ho , services bhaney ni class nai ho, directive bhaneyni class nai ho, selector bhaeyni class nai ho .
+
+decorator, // yo class module nai ho , yo class component nai ho or services nai ho or directive nai ho or pipe ho bhaney kura cbutauney kura derector le garcha.
+selector, // selector can be used as html-element to load component.
+meta data // object ho
+
+
+
+
+angular ko applicationko lagi eauta root component and root module chaiyo chayo..
+component bhaneyko chai hamro lagi page ho .
+jastai kun page chai load garney suruma.. teslai root componet garney tw ..
+
+
+3 ota ts file huncha.
+ i.e 
+ 1) index.ts
+ 2) component.ts // we have
+ selector //
+
+ 3) module.ts // module bhitra bootstrap huncha junle hamro main fille k ho bhaneyra chinaucha.
+ it includes 
+ declaration
+ imports // nroweser module
+ provides //
+ bootstrap // easma mail file rakhne apcha
 
 
 

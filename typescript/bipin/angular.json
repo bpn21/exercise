@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "bipin"
+    }
+  },
+  "defaultProject": "bipin",
+  "cli": {
+    "analytics": "e20ccfd0-ad1c-48f9-8253-cac3b2a3c410"
+  }
 }
