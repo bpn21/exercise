@@ -143,6 +143,11 @@ module, // class
 exmaple : @ngmodule({
     bootstrap : root component rakhincha like AppComponent
 })
+
+ROOT MODULE KUN HO BHANEYRA ... KASARI CHINI ??? 
+main file ko bootstrap ma k cha .. teslai root module bhanincha
+
+
 component, //class
 services, //class
 directive, //class
@@ -195,6 +200,11 @@ jastai kun page chai load garney suruma.. teslai root componet garney tw ..
  we have ng build // ts ma bhako file lai transpile gardincha..
  there will be a dics file
 clintle pauney bhaneyko disc file ho.
+
+now
+cli.angular.io ma gayera sarara padhney.
+
+
 
 
 

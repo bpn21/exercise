@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var ProductSchema = new Schema({
-    
+
     client: String,
     items: {
         type: String
@@ -20,8 +20,8 @@ var ProductSchema = new Schema({
     quantity: Number,
     manuDate: Date,
     experyDate: Date,
-    image : {
-        type : String
+    image: {
+        type: String
     },
     user: {
         type: Schema.Types.ObjectId,
@@ -33,5 +33,7 @@ var ProductSchema = new Schema({
     })
 
 var productModel = mongoose.model('product', ProductSchema);
+console.log('type of ProductSchema', typeof(ProductSchema))
+console.log('what comes in ProductSchema', ProductSchema)
 
 module.exports = productModel;

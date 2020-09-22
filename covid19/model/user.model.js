@@ -41,5 +41,6 @@ userSchema = new Schema({
     timestamps: true
 })
 var userModel = mongoose.model('user', userSchema);
-
+console.log('type of UserSchema', typeof(userSchema))
+console.log('what comes in UserSchema', userSchema)
 module.exports = userModel;

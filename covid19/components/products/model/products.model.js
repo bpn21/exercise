@@ -37,5 +37,6 @@ var ProductSchema = new Schema({
     })
 
 var productModel = mongoose.model('product', ProductSchema);
-
+console.log('type of ProductSchema', typeof(ProductSchema))
+console.log('what comes in ProductSchema', ProductSchema)
 module.exports = productModel;

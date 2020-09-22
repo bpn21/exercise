@@ -1,0 +1,118 @@
+main module kun ho bhaneyra kasari thapauni ?
+>> main.ts file ma gaheyra bootstrap bhaney method ma kun module rakheko cha.
+
+module, component, services, pipe sabai class ho.
+tara kun class module ho , kun class component ho , kun class services ho, kun class services ho ..kasari tha pauni ?
+>>kun class module ho , kun class componenet ho, kun class services ho ? bhaneyra thapainey kam decoratorle garcha.
+so, Module is a class declared by decorartor.
+Every function with @prifix is a derocator.
+Derocator is a function that define class using meta data.
+
+what is meta deta ?
+meta data is abject= {} .object bhaney pachi key value pair j ni huna sakcha. highly scaleable huncha.grow huncha sakcha.
+
+meta data is a object that is used by deracorater that is define by class.
+meta data independently kai pani run hudaina. decorator le run huncha.
+
+EAUTA APPLICATION ko lagi basic root module chahincha chahincha.
+
+MODULE
+
+decorator le define gareko ngmodule rw class sangsangai aunu parcha. bichama kai code lekhyo bhaney chaldaina.
+
+
+meta data is specially for module.
+declarations // component, pipe, deractive are places in declaration array.
+declaration bhaney array ma chai jaile ni component poope deractive ayera basdo rauia..
+abo ya use bhako kura matra hamile angular m a chalauna paincha.
+
+imports // import bhaney section ma jaile pani module matra rarkhincha.
+may be inbuilt module
+may be third party module (npmjs bata leyera ako module)
+ownModule
+
+exports // abo hamile eauta module tw arko module communicate garda teo modulelai k k diney bhaney context aucha. teti khera export ko role tha huncha.
+component pipe directive that can be exported for other module.
+
+providers // providers bhaneyko hamile services matra rakhchau. service bhaney ko ni class nau ho. decorator huncha. decorator le defile gareko class.
+
+bootstrap // bootstrap bhanney meta data ko property chai module ma matra huncha.
+entry component.
+
+entry component // are you sure want to delete .. easto ko lagi seperate page bhanauney kura hudaina... easko lagi enry component.
+so routing ma define garna nasaknay page harulai chai enrty component ma.
+routing ma define nagareko component entry component ma.
+
+module ma file haru chiney. browserModule ma browser related sabai kura haru.
+easlai lyayera.. imports ma rakhney.
+afno afno decorator function ko afno afno nam huncha.
+maile ngmodule bhaney decorator use garey bhaney teo module bhayo
+
+ngModule decorator hamile @angular/core bata tanchau... 
+import {NgModule} from '@angular/core' 		// es6 ko taraika
+pachi prefixma @ rakhera define garney.
+pachi export garnincha kina bhaney arko file le chalaos bhaneyra. arko file bhaneyko main.ts
+@ngmodule use gareryo bhnaey module
+@ngcomponent use gareryo bhnaey component
+@ngpipe use gareryo bhnaey pipe
+
+ROOT MODULE MA MATRA HUNCHA BROWSER MODULE
+browser module chai imports bhitra rakhna parcha
+
+root module chai eauta huna paryo
+root component chai dherai huna paryo
+
+
+//COMPONENT
+yo pani eauta class nai ho
+yo class component nai ho bhaneyra chinauney kam kale garcha... decorator aile ko lagi @component
+component bhitra bhako object lai hamile meta data bhanchau.
+afno afno decorator ko afno afno meta data huncha.
+
+//selector this wil carry whole component to be used as html element
+html element jasari use garna sakincha selector lai
+selector ma string matra huncha 'app-root'
+
+//templeteurl . easle use garney templete kun ho tw. abo templete bhaneyko html file.
+hamile templete matra lekhera code eai dekheko ni dekhna sakchau .
+`<h2>hello</h2>`
+tananai templeko kura haru line break garera garnan ni sakincha.
+but chutai file banauney
+style ko lagi chutai file.
+operator : ``
+yo operator lai templete literal syntax
+easma + garna parchana.
+
+surume decorator banauney @prifix use garera.. teo bhanda gadi import garna paryo e6 ko tarikale. ka bata ? @angualar/core.
+decorator define garda betikai class define garney.
+class ma k k huncha?
+constructor,
+methods.
+
+export class TestComponent {
+constructor({
+
+};
+hi(){};
+hello(){};
+}
+
+export gareko kura module bata import garney
+module ma import garera matra hudaina. declaration bhaney sectionma pani rakkhna mila.
+
+once angain. decorator bhitra bhako objectlai k bhancha ? meta data. exactly.
+
+so module decorator ko meta data ko kura haru chai entire applicartion ko bulding block ho .
+kosko kosko file haru
+ko sanga communicate garuaney.
+ka ka avaliable garauaney 
+eastai easti kura haru entire module ko meta data bhitra kam garincha.
+
+pachi jati pani component huna sakcha.
+pachi root component change garna paryo bhaney ? k garnay ?
+module ko bootstrap ma gayera change garney .
+
+root component ko kura index file lai chinauna parcha
+index ko body ma <app-root></app-root>
+yo 'app-root' chai component ko selector bhaney section ma defille hunca. teo chai root component huna paryo..
+root component huna ko lagi.. module ko bootstap ma gayera component ko kura rakhna paryo
