@@ -1,0 +1,86 @@
+Inheritance is the process of organising the information in a hierarchical form.
+Though inheritance we can create new class called derived class.
+
+The derived class inherits all the features of base class and can add new features.
+#include <iostream>
+
+using namespace std;
+
+class base {
+    public:
+    void showbase(){
+    cout<<"this is from base class"<<endl;
+    };
+};
+
+class derived : public base{
+    public:
+    void show(){
+    cout<<"this is from derived class"<<endl;
+        };
+};
+int main()
+{
+    derived obj;
+    cout<<"here: ", obj.show();
+    cout<<"inherit the features of base class<<<<<< ",obj.showbase();
+    // base objOne;             NOT ALLOWED BASE CLASS CANNOT INHERIT THE FEATURES OF DEDRIVED CLASS .
+    // cout<<"here: ", objOne.show(); //NOT ALLOWED
+    return 0;
+};
+
+
+
+
+MULTILEVEL INHERITANCE
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+class base
+{
+public:
+  void showbase ()
+  {
+    cout << "this is from base class" << endl;
+  };
+};
+
+class derived1:public base
+{
+public:
+  void showd1 ()
+  {
+    cout << "this is from derived1 class" << endl;
+  };
+};
+
+class derived2:public derived1
+{
+public:
+  void showd2 ()
+  {
+    cout << "this is from derived2 " << endl;
+  };
+};
+
+int
+main ()
+{
+  derived2 obj;
+  cout << "inherit the features of base class<<<<<< ", obj.showbase ();
+  cout << "inherit the features of derived class <<<", obj.showd1 ();
+  cout << "features of own class <<", obj.showd2 ();
+//   base objOne;
+//   objOne.showd2 ();		//  NOT ALLOWED BASE CLASS CANNOT INHERIT THE FEATURES OF DEDRIVED CLASS .
+  // cout<<"here: ", objOne.show(); //NOT ALLOWED
+  return 0;
+};

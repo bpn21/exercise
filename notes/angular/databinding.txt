@@ -1,0 +1,40 @@
+Data Binding
+Forms module le data binding garna dincha.
+formsModule import garney es6 ko through bata
+data binding ko kam ... views rw controller ko synchronize garna paryo.
+
+ways to data binding
+1> event binding // (click) // paranthesis enclosed value are events in angular.It is used to all any expression (method) of a class.
+2> propoerty binding // [hidden],[disabled] takes bollen values for binding values. 
+3(important) > two way data binding : value from controller to watch changes.
+
+event binding rw propoerty binding garda forms module chaidaina. but two way data binding ko lagi chai forms module chahincha.
+
+
+controller rw forms ko bich ma communicate garna paryo bhaney.. 1st we need formsModule and we have a keyword [(ngModel)]
+
+HTML FILE
+            <input type="text" id="username" [(ngModel)]="username" name="username"><br><br>
+            <label for="password">Password</label><br>
+            <input type="password" id="password" [(ngModel)]="password" name="password"><br><br>
+
+
+controller file or we call it login.component.ts
+
+// export class LoginComponent implements OnInit {
+// submitting: boolean = false;
+    username: String;           <<<<<<<<<<<<<<<<
+    password: String;           <<<<<<<<<<<<<<<<
+//  constructor() { }
+
+//  ngOnInit(): void {
+//  }
+
+  login() {
+    this.submitting = true;
+    console.log('username', this.username) <<<<<<
+    console.log('password', this.password) <<<<<<
+
+  }
+
+}

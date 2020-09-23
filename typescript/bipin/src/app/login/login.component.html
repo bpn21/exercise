@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div class=login>
+        <form>
+            <label for="username">Username</label><br>
+            <input type="text" id="username" [(ngModel)]="username" name="username" (change)= "callForChange"><br><br>
+            <label for="password">Password</label><br>
+            <input type="password" id="password" [(ngModel)]="password" name="password"><br><br>
+            <input *ngIf=!submitting type="button" value="Login" (click)="login()">
+            <input *ngIf=submitting type="button" value="Logging in..." [disabled]='submitting'>
+        </form>
+    </div>
+    <p class="Welcome">Welcome, <br>Please login to proceed</p>
+
+</body>
+
+</html>
