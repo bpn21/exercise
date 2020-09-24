@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {User} from './../users/user.model'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   submitting: boolean = false;
-  username: String;
-  password: String;
+user
   constructor() { }
 
   ngOnInit(): void {
@@ -16,11 +15,11 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.submitting = true;
-    console.log('username', this.username)
-    console.log('password', this.password)
+    console.log('username', this.user.username)
+    console.log('password', this.user.password)
     setTimeout(() => {
-      this.username = 'bipin';
-      this.password = 'gaire';
+      this.user.username = 'bipin';
+      this.user.password = 'gaire';
     }, 4000)
   }
   callForChange() { };
