@@ -4,7 +4,7 @@
 
     <h1>Please Register</h1>
     <form class="register">
-        <form #reigsterForm="ngForm">
+        <form #registerForm="ngForm">
             <input class="firstname" type="text" placeholder="First Name*" id="firstname" [(ngModel)]="user.firstname"
                 name="firstname" required #firstName="ngModel">
             <div class="dangerFirstName" [hidden]="firstName.valid || firstName.pristine">
@@ -25,11 +25,10 @@
             </div>
             <input class="password" type="password" placeholder="Password*" id="password" [(ngModel)]="user.password"
                 name="password" minlength="8" required #Password="ngModel">
-            <div class="dangerPassword" [hidden]="Password.valid || Password.pristine">
+            <div class="dangerPassword" *ngIf="Password.errors && Password.dirty && Password.touched">
                 <div *ngIf="Password.errors.required">Required field*</div>
                 <div *ngIf="Password.errors.minlength">Week Password</div>
             </div>
-            <!-- <div *ngIf="password.errors && dirty">Week password</div> -->
             <br>
             <input class="gender" type="text" placeholder="Gender" id="gender" [(ngModel)]="user.gender" name="gender">
             <br>
@@ -37,7 +36,9 @@
         <input type="text" placeholder="Date of Birth" id="dob" [(ngModel)]="dob" name="dob">
         <br> -->
         </form>
-        <input [disabled]="reigsterForm.invalid" class="button" type="button" (click)="registered()" value="Register">
+        <input *ngIf="registerForm.valid" class="button" type="button" (click)="registered()" value="Register">
+        <input  *ngIf="registerForm.invalid" class="button0" type="button" value="Register">
+    
     </form>
 </body>
 

@@ -89,6 +89,12 @@ h1{
   left: 25%;
   transform: translate(-50%, -50%);
 }
+.button0 {
+  position: absolute ;
+  top: 90%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
 .button:hover {
   background-color:rgb(99, 145, 214);
   color: white;

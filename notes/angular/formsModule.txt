@@ -1,0 +1,39 @@
+data binding garna ko lagi [(ngModel)] = "name"
+hamile constructor call garera....like
+**************************************************
+import { User } from './../users/user.model'
+@Component({
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
+})
+export class RegisterComponent implements OnInit {
+  user;
+
+  constructor() {
+
+    this.user = new User({});
+  }
+***************************************************
+data binding garna ko lagi [(ngModel)] = "user.name"
+
+<form #reigsterForm="ngForm">			// #registerForm chai templete ho
+... 
+.. 
+<input [disabled]="reigsterForm.invalid" class="button" type="button" (click)="registered()" value="Register">
+</form>
+
+
+#registerForm .. yo templete use garera we can if there is any error in the form or not. of there is no error. form is valid.
+
+
+ <input class="firstname" type="text" placeholder="First Name*" id="firstname" [(ngModel)]="user.firstname"
+                name="firstname" required #firstName="ngModel">
+            <div class="dangerFirstName" [hidden]="firstName.valid || firstName.pristine">
+                Required field*
+            </div>
+
+#firstName . yo pani templete ho . through we can check if the firstName is valid or not 
+    <div class="dangerPassword" *ngIf="Password.errors && Password.dirty && Password.touched">
+                <div *ngIf="Password.errors.required">Required field*</div>
+                <div *ngIf="Password.errors.minlength">Week Password</div>
