@@ -1,0 +1,2 @@
+angualar cli is the Command Line Interface TOOL that you use to initlize, develop, scaffold(bulding), and maintain Angular applications directly form a command line.\
+The CLI supports the full development cycle, including building, testing, bundling, and deployment.

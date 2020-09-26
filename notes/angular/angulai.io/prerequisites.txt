@@ -1,0 +1,20 @@
+HOW TO SETUP ENVIROMENT FOR ANGULAR DELELOPMENT USI CLI TOOL.
+This includes
+Angular fundamentals
+JavaScript
+HTML
+CSS
+Angular CLI
+>>>>>>>>>Prereqesties<<<<<<<<<<
+To use Angiular framework you should be familier with the following.
+JavaScript
+HTML
+CSS
+Knowledge of typescript is helpful, but not required.
+
+to install angular on your local system. you need the following.
+Node.js
+Angular requires current, Active LTS and maintainance LTS. [LTS : LONG TERM SUPPORT]
+
+NPM Pacakage manager
+Angualr, angular cli and application depends upon the npm package for many features and functions.

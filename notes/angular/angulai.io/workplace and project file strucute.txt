@@ -1,0 +1,45 @@
+A workspace contains the files for one or more projects.
+Workspace configuration files
+
+WORKSPACE CONFIG FILES	PURPOSE
+.editorconfig	Configuration for code editors. See EditorConfig.
+.gitignore	Specifies intentionally untracked files that Git should ignore.
+README.md	Introductory documentation for the root app.
+angular.json	CLI configuration defaults for all projects in the workspace, including configuration options for build, serve, and test tools that the CLI uses, such as TSLint, Karma, and Protractor. For details, see Angular Workspace Configuration.
+package.json	Configures npm package dependencies that are available to all projects in the workspace. See npm documentation for the specific format and contents of this file.
+package-lock.json	Provides version information for all packages installed into node_modules by the npm client. See npm documentation for details. If you use the yarn client, this file will be yarn.lock instead.
+src/	Source files for the root-level application project.
+node_modules/	Provides npm packages to the entire workspace. Workspace-wide node_modules dependencies are visible to all projects.
+tsconfig.json	The base TypeScript configuration for projects in the workspace. All other configuration files inherit from this base file. For more information, see the Configuration inheritance with extends section of the TypeScript documentation.
+tslint.json	Default TSLint configuration for projects in the workspace.
+
+By default, the CLI command ng new my-app creates a workspace folder named "my-app" and generates a new application skeleton in a src/ folder at the top level of the workspace. A newly generated application contains source files for a root module, with a root component and template.
+
+For a single-application workspace, the src/ subfolder of the workspace contains the source files (application logic, data, and assets) for the root application. For a multi-project workspace, additional projects in the projects/ folder contain a project-name/src/ subfolder with the same structure.
+
+
+APP SUPPORT FILES	PURPOSE
+app/	Contains the component files in which your application logic and data are defined. See details below.
+assets/	Contains image and other asset files to be copied as-is when you build your application.
+environments/	Contains build configuration options for particular target environments. By default there is an unnamed standard development environment and a production ("prod") environment. You can define additional target environment configurations.
+favicon.ico	An icon to use for this application in the bookmark bar.
+index.html	The main HTML page that is served when someone visits your site. The CLI automatically adds all JavaScript and CSS files when building your app, so you typically don't need to add any <script> or<link> tags here manually.
+main.ts	The main entry point for your application. Compiles the application with the JIT compiler and bootstraps the application's root module (AppModule) to run in the browser. You can also use the AOT compiler without changing any code by appending the --aot flag to the CLI build and serve commands.
+polyfills.ts	Provides polyfill scripts for browser support.
+styles.sass	Lists CSS files that supply styles for a project. The extension reflects the style preprocessor you have configured for the project.
+test.ts	The main entry point for your unit tests, with some Angular-specific configuration. You don't typically need to edit this file.
+
+
+Inside the src/ folder, the app/ folder contains your project's logic and data. Angular components, templates, and styles go here.
+
+
+SRC/APP/ FILES	PURPOSE
+app/app.component.ts	Defines the logic for the app's root component, named AppComponent. The view associated with this root component becomes the root of the view hierarchy as you add components and services to your application.
+app/app.component.html	Defines the HTML template associated with the root AppComponent.
+app/app.component.css	Defines the base CSS stylesheet for the root AppComponent.
+app/app.component.spec.ts	Defines a unit test for the root AppComponent.
+app/app.module.ts	Defines the root module, named AppModule, that tells Angular how to assemble the application. Initially declares only the AppComponent. As you add more components to the app, they must be declared here.
+app/package.json	This file is generated only in applications created using --strict mode. This file is not used by package managers. It is used to tell the tools and bundlers whether the code under this directory is free of non-local side-effects.
+
+
+
