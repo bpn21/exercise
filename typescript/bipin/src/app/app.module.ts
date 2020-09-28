@@ -8,13 +8,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const appRout: Routes = [
   {
     path: '',
     component: LoginComponent,
-    pathMatch : 'full'
+    pathMatch: 'full'
   },
   {
     path: 'login',
@@ -25,9 +26,14 @@ const appRout: Routes = [
     component: RegisterComponent
   },
   {
-    path :'forgot-password',
+    path: 'forgot-password',
     component: ForgotPasswordComponent
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
+
 ]
 @NgModule({
   declarations: [

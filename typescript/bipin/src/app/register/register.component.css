@@ -175,7 +175,10 @@ h1{
 span{
   color: white;
   left :75%;
-  top :95%;
-  font-style: italic;
+  top :92%;
   position : absolute;
+  background-color: rgb(87, 21, 21);
+  border-radius: 14px;
+  font-style: normal;
+  padding: 0.5%;
 }

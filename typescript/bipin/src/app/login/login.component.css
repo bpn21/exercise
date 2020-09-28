@@ -86,7 +86,7 @@ input[type=button] {
   width: 800px;
   position: absolute;
   margin: 150px ;
-  padding: 180px;
+  padding: 110px;
   overflow: hidden;
   top : -5%;
   /* Styles */
@@ -141,4 +141,9 @@ span{
   left :5%;
   top : 85%;
   position : absolute;
+  background-color: rgb(87, 21, 21);
+  border-radius: 14px;
+  font-style: normal;
+  padding: 0.5%;
+
 }
