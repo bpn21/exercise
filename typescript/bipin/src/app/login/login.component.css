@@ -16,29 +16,129 @@ input[type=password], select {
     border-radius: 4px;
     box-sizing: border-box;
   }
-input[type=button] {
-  width: 20%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
-
+  label{
+    color : white;
+  }
 p.Welcome {
     margin: 0;
     position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+    top:30%;
+    left:  50%;
+    background-color : rgb(87, 21, 21);
+    color : aliceblue;
+    border-radius: 14px;
+    padding:10%;
+    font-weight: 500;
+    font-style: oblique;
+    font-size: x-large;
+       box-shadow: 
+        inset 0 0 2px 1px rgb(245, 244, 244), 
+        0 16px 10px -8px rgb(250, 246, 246);
+  }
 div{
     margin: 10;
   
     top: 10%;
-    left: 0%;
+    left: 0%
    ;
+}
+input[type=text], select {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=password], select {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+input[type=button] {
+  width: 20%;
+  background-color: rgb(83, 16, 16);
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0;
+  position: absolute;
+  top: 75%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.login {
+  font-family: 'Ubuntu', 'Lato', sans-serif;
+  font-weight: 500;
+  font-style: oblique;
+      /* Size and position */
+  width: 800px;
+  position: absolute;
+  margin: 150px ;
+  padding: 180px;
+  overflow: hidden;
+  top : -5%;
+  /* Styles */
+  background: rgb(117, 30, 30); 
+  border-radius: 1em;
+  border: 1px solid #191919;
+  box-shadow: 
+  inset 0 0 2px 1px rgb(117, 30, 30), 
+  0 16px 10px -8px rgb(117, 30, 30);
+}
+
+h1{
+font-family: 'Ubuntu', 'Lato', sans-serif;
+ color : rgb(196, 193, 193);
+  font-weight: 400;
+  /* Size and position */
+  width:400px;
+  position: relative;
+  padding: 10px;
+  
+    /* Styles */
+    background: rgb(117, 30, 30); 
+    border-radius: 0.1em;
+    border: 1px solid #191919;
+    box-shadow: 
+        inset 0 0 2px 1px rgb(117, 30, 30), 
+        0 16px 10px -8px rgb(117, 30, 30);
+}
+
+.button:hover {
+background-color:rgb(99, 145, 214);
+color: white;
+}
+
+.password{
+margin: 0;
+position: absolute;
+top: 55%;
+left: 25%;
+transform: translate(-50%, -50%);
+}
+
+.dangerPassword{
+color: white;
+margin: 0;
+position: absolute;
+top: 65%;
+left: 10%;
+}
+span{
+  color: white;
+  left :5%;
+  top : 85%;
+  position : absolute;
 }

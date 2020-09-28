@@ -36,10 +36,12 @@
         <input type="text" placeholder="Date of Birth" id="dob" [(ngModel)]="dob" name="dob">
         <br> -->
         </form>
-        <input *ngIf="registerForm.valid" class="button" type="button" (click)="registered()" value="Register">
-        <input  *ngIf="registerForm.invalid" class="button0" type="button" value="Register">
-    
+        <input *ngIf="!registering" class="button" type="button" (click)="registered()" value="Register">
+        <input *ngIf="registering" class="button0" type="button" value="Registering" [disabled]="registering">
     </form>
+    <span> Back to Login
+        <a [routerLink]="['/login']">Login</a>
+    </span>
 </body>
 
 </html>

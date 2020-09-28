@@ -1,0 +1,73 @@
+Routing garna ko lagi. 1st we import router module in root module and delare component in declaration.
+RouterModle must be in imports of appModule if appModule is the root module.
+
+How to know which module is the root module .
+we must see in main file. and see what is there in bootstrapModule.
+
+
+
+
+appModule file ma .. we write
+
+import { RouterModule, Routes } from '@angular/router';
+const appRout: Routes = [
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+
+ @NgModule({
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    HeaderComponent,
+    FooterComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(appRout),
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+Afer then .. appComponent ko selector ma k cha? if there is "app-root"
+we write <app-root></app-root> in index.html file in body section.
+tespachi..bala appComponent sanga commununication huncha.
+ani app.component.html file run huncha
+
+in app.component.html file we write
+<app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+
+
+<router-outlet></router-outlet>
+this element is very important directive which is used as placeholder for the component to be loaded for different path.
+eai router- outlet nai ho single page application banauney.
+page ko content change huncha but reload chai hudaina.
+
+page bhitra ko content chai router outletma ayera bascha.
+page ko content kole change garaidincha ? >> router-outlet le
+
+
+ABO HAMILE HREF use nagarney
+i.e <a href ="/login"></a> 
+functionality tw milacha.. but page relode huncha.
+yo use nagarney.
+
+abo hamisanga RouterModule le routing ko lagi derective deko cha
+
+<a [routerLink] ="['/login']">Login</span>
+
+ <span><br>Do you have an account ? Click here
+            <a [routerLink]="['/register']">Register</a> /// yo property binding syantax ho 
+        </span>
+

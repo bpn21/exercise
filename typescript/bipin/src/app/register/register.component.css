@@ -27,7 +27,7 @@ input[type=text], select {
     cursor: pointer;
     margin: 0;
     position: absolute;
-    top: 93%;
+    top: 90%;
     left: 20%;
     transform: translate(-50%, -50%);
     
@@ -47,11 +47,12 @@ input[type=text], select {
     font-style: oblique;
         /* Size and position */
     width: 800px;
+    height: 100px;
     position: absolute;
     margin: 150px ;
     padding: 150px;
     overflow: hidden;
-    top : -5%;
+    top : 10%;
     /* Styles */
     background: rgb(117, 30, 30); 
     border-radius: 1em;
@@ -171,3 +172,10 @@ h1{
   left: 10%;
 }
 
+span{
+  color: white;
+  left :75%;
+  top :95%;
+  font-style: italic;
+  position : absolute;
+}
