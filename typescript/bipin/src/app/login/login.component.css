@@ -23,14 +23,14 @@ input[type=password], select {
 p.Welcome {
     margin: 0;
     position: absolute;
-    top:30%;
+    top:15%;
     left:  50%;
     background-color : rgb(87, 21, 21);
     color : aliceblue;
     border-radius: 14px;
     padding:10%;
     font-weight: 500;
-    font-style: oblique;
+    font-style: normal;
     font-size: x-large;
        box-shadow: 
         inset 0 0 2px 1px rgb(245, 244, 244), 

@@ -9,32 +9,9 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AppRoutingModule } from './app.routing';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
-
-const appRout: Routes = [
-  {
-    path: '',
-    component: LoginComponent,
-    pathMatch: 'full'
-  },
-  {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'register',
-    component: RegisterComponent
-  },
-  {
-    path: 'forgot-password',
-    component: ForgotPasswordComponent
-  },
-  {
-    path: '**',
-    component: PageNotFoundComponent
-  }
-
-]
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,12 +19,14 @@ const appRout: Routes = [
     RegisterComponent,
     HeaderComponent,
     FooterComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    PageNotFoundComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRout),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -39,6 +39,8 @@
         <input *ngIf="!registering" class="button" type="button" (click)="registered()" value="Register">
         <input *ngIf="registering" class="button0" type="button" value="Registering" [disabled]="registering">
     </form>
+    <p class="Welcome"> <br>Ivoice Manager</p>
+
     <span> Back to Login
         <a [routerLink]="['/login']">Login</a>
     </span>

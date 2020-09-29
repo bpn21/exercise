@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from './../users/user.model'
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import { User } from './../users/user.model'
 export class LoginComponent implements OnInit {
   submitting: boolean = false;
   user
-  constructor() {
+  constructor(public router: Router) {
     this.user = new User({});
   }
 
@@ -17,8 +18,9 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.submitting = true;
-    console.log('username', this.user.username)
-    console.log('password', this.user.password)
+    console.log('username', this.user.username);
+    console.log('password', this.user.password);
+    this.router.navigate(['/dashboard'])
   }
   callForChange() { };
 
