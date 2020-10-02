@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from './../users/user.model'
+import { User } from './../../users/user.model'
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',

@@ -46,11 +46,11 @@ input[type=text], select {
     font-weight: 500;
     font-style: oblique;
         /* Size and position */
-    width: 800px;
+    width: 750px;
     height: 100px;
     position: absolute;
     margin: 150px ;
-    padding: 150px;
+    padding: 200px;
     overflow: hidden;
     top : 10%;
     /* Styles */
@@ -89,19 +89,10 @@ h1{
   margin: 0;
   position: absolute ;
   top: 90%;
-  left: 25%;
+  left: 45%;
   transform: translate(-50%, -50%);
 }
-.button0 {
-  position: absolute ;
-  top: 90%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-}
-.button:hover {
-  background-color:rgb(99, 145, 214);
-  color: white;
-}
+
 .firstname{
   margin: 0;
   position: absolute;
@@ -176,8 +167,8 @@ h1{
 
 span{
   color: white;
-  left :80%;
-  top :92%;
+  left :1%;
+  top :94%;
   position : absolute;
   background-color: rgb(87, 21, 21);
   border-radius: 14px;
@@ -187,7 +178,7 @@ span{
 p.Welcome {
   margin: 0;
   position: absolute;
-  top:75%;
+  top:59%;
   left:  65%;
   background-color : rgb(87, 21, 21);
   color : aliceblue;

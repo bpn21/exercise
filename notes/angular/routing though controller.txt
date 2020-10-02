@@ -1,0 +1,44 @@
+1) suruma hamilai chaiyo routerModule
+config 
+i.e
+2) const appRout: Routes = [                   //config
+    {
+        path: '',
+        component: LoginComponent,
+        pathMatch: 'full'
+    },
+    {
+        path: 'login',
+        component: LoginComponent
+    },
+    {
+        path: 'register',
+        component: RegisterComponent
+    },
+    {
+        path: 'forgot-password',
+        component: ForgotPasswordComponent
+    },
+    {
+        path:'dashboard',
+        component: DashboardComponent
+    },
+    {
+        path: '**',
+        component: PageNotFoundComponent
+    }
+
+]
+
+3) router outlet : this a element to be used where component needs to be placed.
+4) routerLink: attribule used to navigate in view file.
+    <span>Do you have an account ? Click here to Register
+            <a [routerLink]="['/register']">Register</a>
+            <br>Forgot Password? Click here
+         <a [routerLink]="['/forgot-password']">Forgot Password</a>
+        </span>
+
+5) router: injectable used in constructor to add in class for navigation .
+eg : 
+router.navigate(['/path_to_go'])
+

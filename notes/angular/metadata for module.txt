@@ -1,0 +1,5 @@
+providers : services that are declared are placed in providers.
+bootstrap : bootstrap is always in root module only and we put root component in bootstrap array
+imports : jaile pani module matra rakhchau . like FormsModule, browserModule, RouterModule
+exports: component pipes dericatives that can be exported from module for other module.
+declaration : components, pipes, directives are placed on providers.
