@@ -21,7 +21,6 @@ const appRout: Routes = [                   //config
         path: 'users',
         loadChildren: './auth/sharedModule#sharedModule'
     }
-
 ]
 @NgModule({
     imports: [RouterModule.forRoot(appRout)],
